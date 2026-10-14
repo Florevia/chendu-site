@@ -1,0 +1,295 @@
+{
+  "date": "2026-10-12",
+  "topic": "ai",
+  "topic_label": "AI",
+  "issue_title_zh": "硅谷为“自我监管”欢呼：白宫放手，实验室自查？",
+  "lead_zh": "今天读美联社（AP）从旧金山 Tech Week 发回的报道。一边是创投对 hands-off 监管的 ebullient，一边是 OpenAI 前安全负责人警告 self-policing 代替不了 hard law。重点看：ebullient / hands-off / stymie / unbridled / stake political capital 这类政策与科技新闻套话。",
+  "article": {
+    "title": "In Silicon Valley, AI founders cheer Trump’s calls for the industry to police itself on safety",
+    "author": "Garance Burke",
+    "source": "The Associated Press",
+    "published": "2026-10-11 03:08 EDT（北京时间 10 月 11 日 15:08）",
+    "url": "https://www.wral.com/news/ap/32064-in-silicon-valley-ai-founders-cheer-trump-s-calls-for-the-industry-to-police-itself-on-safety/",
+    "url_label": "AP 原文（WRAL 转载）",
+    "alt_urls": [
+      {
+        "label": "AP News 原文",
+        "url": "https://apnews.com/article/ai-safety-openai-tech-week-32064fde8ad68c68f71d82336f7db525"
+      }
+    ],
+    "excerpt_note": "节选自原文开篇与安全争论段落（约 390 词）。版权归 The Associated Press 所有，仅供个人学习，完整报道请看原文。",
+    "sections": [
+      [
+        "SAN FRANCISCO (AP) — Tech Week is in full bloom in San Francisco, packing the city's restaurants this week with venture capitalists and AI founders ebullient about the White House's stance on regulating artificial intelligence — namely, don't do it.",
+        "And after months of debate about leading AI companies' unchecked AI agents meddling with everything from U.S. government websites to healthcare data, the nation now finds itself further from governing AI systems than it was a few years ago.",
+        "President Donald Trump brought tech titans to Washington late last month for a luncheon and ceremonial signing of a voluntary safety pact he described as \"almost a constitution\" surrounding \"Super Intelligence,\" the administration's new preferred term for AI.",
+        "The 308-word agreement lays out that advanced AI labs should follow safety protocols and set up internal teams to monitor their own progress, but the administration has yet to provide details on how, in OpenAI CEO Sam Altman's words, to keep \"bad things\" from happening.",
+        "Safety challenges were not top of mind inside a crowded event space in San Francisco on Wednesday, where founders and funders said the government's hands-off approach would net higher profits for companies building AI-powered defense and security systems."
+      ],
+      [
+        "Panelists praised the government's bullish industry support at one meeting aimed at \"investing in the forefront,\" part of the blitz of popup events organized by Andreessen Horowitz, a venture firm whose head is a Trump science and tech adviser.",
+        "A day later, three researchers at OpenAI's headquarters said the ChatGPT maker had fired them, posting that \"fear and unclear rules stymie AI safety work.\" Separately, David Robinson, a leader on OpenAI's safety team until he recently resigned, said he was worried about letting the advanced labs police themselves.",
+        "\"This is no substitute for hard law, and it does give a lot of freedom to the companies,\" Robinson said. \"The time between model generations is measured in weeks … and I think we have some very serious safety challenges in front of us in the nearer term.\"",
+        "Trump has staked his political capital on the AI industry's success, saying its unbridled development is key to winning the AI race against China. On the first day of his second term, the Republican president repealed a Biden-era executive order aimed in part at guarding against the risks that AI systems pose to consumers, workers and national security."
+      ]
+    ]
+  },
+  "notes": [
+    {
+      "p": [0, 0],
+      "anchor": "in full bloom",
+      "type": "idiom",
+      "head": "in full bloom",
+      "zh": "盛开、正热闹。本义花开正盛，这里喻 Tech Week 活动开到最旺。也可说 the festival is in full bloom。"
+    },
+    {
+      "p": [0, 0],
+      "anchor": "ebullient about",
+      "type": "vocab",
+      "head": "ebullient",
+      "zh": "热情洋溢的、兴高采烈的。ebullient about X = 对 X 兴奋得不行。比 excited / upbeat 更书面、更“冒泡”。"
+    },
+    {
+      "p": [0, 0],
+      "anchor": "namely, don't do it",
+      "type": "grammar",
+      "head": "namely",
+      "zh": "也就是、即。后面直接点明前文 stance 的具体内容：don't do it = 别监管。冒号或破折号后也常见。"
+    },
+    {
+      "p": [0, 1],
+      "anchor": "unchecked AI agents",
+      "type": "vocab",
+      "head": "unchecked",
+      "zh": "不受约束的、未加遏制的。unchecked growth / power / agents。和上一期 rogue agents 同一话题线。"
+    },
+    {
+      "p": [0, 1],
+      "anchor": "meddling with",
+      "type": "vocab",
+      "head": "meddle with",
+      "zh": "插手、乱碰。带负面色彩：agents meddling with government websites = 擅自介入。名词 meddling。"
+    },
+    {
+      "p": [0, 2],
+      "anchor": "tech titans",
+      "type": "idiom",
+      "head": "titan",
+      "zh": "巨头。tech titans = 科技界大佬。财经新闻固定说法，也说 industry titans。"
+    },
+    {
+      "p": [0, 2],
+      "anchor": "voluntary safety pact",
+      "type": "vocab",
+      "head": "pact",
+      "zh": "协定、契约。voluntary = 自愿的（非强制立法）。和 hard law 形成对照，是全文核心张力。"
+    },
+    {
+      "p": [0, 3],
+      "anchor": "lays out that",
+      "type": "grammar",
+      "head": "lay out that…",
+      "zh": "阐明、规定……。协议/计划 lays out that… = 写明要求。也可 lay out a plan / the rules。"
+    },
+    {
+      "p": [0, 4],
+      "anchor": "not top of mind",
+      "type": "idiom",
+      "head": "top of mind",
+      "zh": "最先想到的、当下最关心的。not top of mind = 根本没放在心上。营销/政治新闻高频。"
+    },
+    {
+      "p": [0, 4],
+      "anchor": "hands-off approach",
+      "type": "idiom",
+      "head": "hands-off",
+      "zh": "不干预的、放手的。hands-off approach / policy = 少管、不管。反义 hands-on。"
+    },
+    {
+      "p": [0, 4],
+      "anchor": "would net higher profits",
+      "type": "vocab",
+      "head": "net (v.)",
+      "zh": "净得、带来（利润）。net higher profits = 净赚更多。名词 net = 净值/球网。"
+    },
+    {
+      "p": [1, 0],
+      "anchor": "bullish industry support",
+      "type": "vocab",
+      "head": "bullish",
+      "zh": "看涨的、乐观支持的。来自股市 bull market。bullish on AI / bullish support = 力挺、看好。"
+    },
+    {
+      "p": [1, 0],
+      "anchor": "blitz of popup events",
+      "type": "idiom",
+      "head": "blitz",
+      "zh": "闪电战式密集活动。a blitz of events = 一连串快闪活动。popup = 快闪、临时弹出的。"
+    },
+    {
+      "p": [1, 1],
+      "anchor": "stymie AI safety work",
+      "type": "vocab",
+      "head": "stymie",
+      "zh": "阻碍、卡住。fear and unclear rules stymie… = 恐惧与规则不清拖累安全工作。比 block 更书面。"
+    },
+    {
+      "p": [1, 1],
+      "anchor": "police themselves",
+      "type": "idiom",
+      "head": "police oneself",
+      "zh": "自我监管。let labs police themselves = 让实验室自己管自己。全文标题里的 police itself 同源。"
+    },
+    {
+      "p": [1, 2],
+      "anchor": "no substitute for hard law",
+      "type": "idiom",
+      "head": "no substitute for",
+      "zh": "代替不了……。hard law = 硬法（有强制力的立法），对 soft law / voluntary pact。"
+    },
+    {
+      "p": [1, 2],
+      "anchor": "measured in weeks",
+      "type": "grammar",
+      "head": "be measured in…",
+      "zh": "以……为单位来衡量。time… is measured in weeks = 间隔短到论周。强调迭代极快。"
+    },
+    {
+      "p": [1, 3],
+      "anchor": "staked his political capital",
+      "type": "idiom",
+      "head": "stake political capital",
+      "zh": "押上政治资本。stake A on B = 把 A 押在 B 上。政治新闻高频：赌声誉、押注成功。"
+    },
+    {
+      "p": [1, 3],
+      "anchor": "unbridled development",
+      "type": "vocab",
+      "head": "unbridled",
+      "zh": "不受缰绳约束的、放纵的。unbridled growth / ambition。和 unchecked 近义，画面感更强。"
+    },
+    {
+      "p": [1, 3],
+      "anchor": "repealed a Biden-era executive order",
+      "type": "vocab",
+      "head": "repeal",
+      "zh": "废止（法律/行政令）。executive order = 行政命令。Biden-era = 拜登时期的。"
+    }
+  ],
+  "review_words": [
+    {
+      "word": "ebullient",
+      "ipa": "/ɪˈbʌliənt/",
+      "zh": "adj. 热情洋溢的",
+      "example": "Founders were ebullient about the hands-off stance."
+    },
+    {
+      "word": "unchecked",
+      "ipa": "/ʌnˈtʃekt/",
+      "zh": "adj. 不受约束的",
+      "example": "Unchecked AI agents meddled with government sites."
+    },
+    {
+      "word": "meddle",
+      "ipa": "/ˈmedl/",
+      "zh": "v. 插手，干预",
+      "example": "Critics say agents are meddling with public systems."
+    },
+    {
+      "word": "pact",
+      "ipa": "/pækt/",
+      "zh": "n. 协定，契约",
+      "example": "Leaders signed a voluntary safety pact at the White House."
+    },
+    {
+      "word": "hands-off",
+      "ipa": "/ˌhændz ˈɔːf/",
+      "zh": "adj. 不干预的",
+      "example": "A hands-off approach may net higher short-term profits."
+    },
+    {
+      "word": "bullish",
+      "ipa": "/ˈbʊlɪʃ/",
+      "zh": "adj. 看涨的；力挺的",
+      "example": "Panelists praised the government's bullish support."
+    },
+    {
+      "word": "blitz",
+      "ipa": "/blɪts/",
+      "zh": "n. 闪电式密集行动",
+      "example": "A blitz of popup events filled the week."
+    },
+    {
+      "word": "stymie",
+      "ipa": "/ˈstaɪmi/",
+      "zh": "v. 阻碍，卡住",
+      "example": "Unclear rules can stymie safety research."
+    },
+    {
+      "word": "unbridled",
+      "ipa": "/ʌnˈbraɪdld/",
+      "zh": "adj. 不受约束的",
+      "example": "He called unbridled development key to winning the race."
+    },
+    {
+      "word": "repeal",
+      "ipa": "/rɪˈpiːl/",
+      "zh": "v. 废止，撤销",
+      "example": "The president repealed a prior executive order."
+    },
+    {
+      "word": "nearer",
+      "ipa": "/ˈnɪrər/",
+      "zh": "adj. 更近的（near 比较级）",
+      "example": "Serious challenges may arrive in the nearer term."
+    },
+    {
+      "word": "titan",
+      "ipa": "/ˈtaɪtn/",
+      "zh": "n. 巨头，巨人",
+      "example": "Tech titans gathered for the ceremonial signing."
+    }
+  ],
+  "patterns": [
+    {
+      "pattern": "A are ebullient about B — namely, C",
+      "zh": "A 对 B 热情高涨——也就是 C",
+      "from": "…AI founders ebullient about the White House's stance on regulating artificial intelligence — namely, don't do it.",
+      "model": "Investors were ebullient about the new rules — namely, fewer limits on buybacks.",
+      "model_zh": "投资者对新规热情高涨——也就是回购限制更少。"
+    },
+    {
+      "pattern": "A finds itself further from B than it was…",
+      "zh": "A 发现自己比……时离 B 更远了",
+      "from": "…the nation now finds itself further from governing AI systems than it was a few years ago.",
+      "model": "The team finds itself further from a product launch than it was last spring.",
+      "model_zh": "团队发现自己比去年春天离产品发布更远了。"
+    },
+    {
+      "pattern": "This is no substitute for A",
+      "zh": "这代替不了 A",
+      "from": "This is no substitute for hard law…",
+      "model": "A voluntary checklist is no substitute for independent audits.",
+      "model_zh": "自愿清单代替不了独立审计。"
+    },
+    {
+      "pattern": "sb has staked … capital on A, saying B",
+      "zh": "某人把……资本押在 A 上，并称 B",
+      "from": "Trump has staked his political capital on the AI industry's success, saying its unbridled development is key to…",
+      "model": "The CEO has staked her reputation on the new chip, saying speed is key to winning customers.",
+      "model_zh": "这位 CEO 把声誉押在新芯片上，并称速度是赢下客户的关键。"
+    }
+  ],
+  "podcast": {
+    "show": "Hard Fork (The New York Times)",
+    "title": "A.I. Agents: Cute, Cuddly and Maybe Catastrophically Dangerous?",
+    "date": "2026-10-02",
+    "url": "https://podcasts.apple.com/us/podcast/a-i-agents-cute-cuddly-and-maybe/id1528594034?i=1000792744626",
+    "zh": "和今天主题同频：rogue agents、白宫自监管峰会、以及“可爱助手 vs 灾难风险”。Max Read 与 Times 记者对谈，语速中等偏快，适合泛听对照 hands-off / self-policing / hard law。"
+  },
+  "audio": {
+    "normal": "audio.mp3",
+    "slow": "audio-slow.mp3",
+    "voice": "en-US-AriaNeural"
+  }
+}

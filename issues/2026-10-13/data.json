@@ -1,0 +1,362 @@
+{
+  "date": "2026-10-13",
+  "topic": "stocks",
+  "topic_label": "美股",
+  "issue_title_zh": "美股忙周开局：指数分化、科技股拖累、油价与 CPI 成焦点",
+  "lead_zh": "今天读美联社（AP）周一收盘综述。标普微跌、道指收涨、纳指走弱——能源涨、芯片跌，典型“指数分化”。重点看：wavering / dragged … into the red / frenzy / closely-watched / settle at 这类财经套话。",
+  "article": {
+    "title": "US stocks hover near their latest record in mixed trading on Wall Street",
+    "author": "Damian J. Troise and Alex Veiga",
+    "source": "The Associated Press",
+    "published": "2026-10-12 16:47 EDT（北京时间 10 月 13 日 04:47）",
+    "url": "https://www.wsbtv.com/news/business/asian-shares-are/5A3M4XJSUM6A7GBTZEMJB2FCX4/",
+    "url_label": "AP 原文（WSB-TV 转载）",
+    "alt_urls": [
+      {
+        "label": "AP News 原文",
+        "url": "https://apnews.com/article/stock-markets-oil-trump-inflation-a9a26b9706963afe9bdeda1b2eb1f51d"
+      },
+      {
+        "label": "KOB 转载",
+        "url": "https://www.kob.com/ap-top-news/us-stocks-hover-near-their-latest-record-in-mixed-trading-on-wall-street/"
+      }
+    ],
+    "excerpt_note": "节选自原文开篇、科技股拖累与油价/经济数据段落（约 405 词）。版权归 The Associated Press 所有，仅供个人学习，完整报道请看原文。",
+    "sections": [
+      [
+        "Wall Street kicked off a busy week on Monday with a mixed finish for the major U.S. stock indexes, although the market remained near its all-time high.",
+        "The S&P 500 slipped 0.1% after wavering between small gains and losses. The benchmark index set a record high last Tuesday and is up 14% so far this year.",
+        "The Dow Jones Industrial Average rose 0.4%, and the Nasdaq composite fell 0.4%.",
+        "Shares in roughly 64% of the companies in the S&P 500 rose, led by communication services stocks. Meta Platforms rose 3.4%, T-Mobile added 2.2%, AT&T gained 1.4% and Verizon Communications rose 2.7%.",
+        "Energy stocks had some of the biggest gains as oil prices kept rising. Chevron rose 1.4%.",
+        "Despite those gains, a slide in big technology stocks dragged the market into the red.",
+        "Micron Technology fell 3.9%, Advanced Micro Devices dropped 2.3%, Broadcom slid 1.9% and Nvidia gave up 1.3%. They are among several companies in the sector with big stock values that tend to have a heavy influence on the market. They have also been the driving force behind the broader market’s record gains throughout the year.",
+        "Those companies could face more scrutiny from investors during this round of corporate earnings as Wall Street tries to get a better sense of whether the stock gains made during the frenzy over artificial intelligence can translate into future growth."
+      ],
+      [
+        "Stocks are reaching for records often because of the tech sector, but remain very volatile on a daily basis, partly because of big shifts in oil prices and their impact on bond yields and inflation.",
+        "The price of Brent crude, the international standard, rose 1.8% to settle at $106.65 per barrel. Prices have been swinging between $96 and nearly $110 over the last month over uncertainty about the U.S. war with Iran and its continued impact on global energy supplies and inflation.",
+        "The surge in energy prices and its impact on the broader economy will be a key focus this week as Wall Street reviews several important economic updates. They include fresh data on the housing market, inflation and retail sales.",
+        "The big updates this week involve reports about inflation hitting consumers and businesses. On Wednesday, the government will release the closely-watched consumer price index, or CPI, which measures price changes for a wide range of products and services. Economists expect the index to show the rate of inflation worsened to 3.6% in September from 3.4% in August."
+      ]
+    ]
+  },
+  "notes": [
+    {
+      "p": [
+        0,
+        0
+      ],
+      "anchor": "kicked off a busy week",
+      "type": "idiom",
+      "head": "kick off",
+      "zh": "开场、拉开序幕。kick off a week / meeting / season。本义踢球开球，财经新闻写“一周交易开局”极常用。"
+    },
+    {
+      "p": [
+        0,
+        0
+      ],
+      "anchor": "mixed finish",
+      "type": "vocab",
+      "head": "mixed",
+      "zh": "涨跌互现的、结果不一的。a mixed finish / session = 三大指数有涨有跌。反义 broad rally / selloff。"
+    },
+    {
+      "p": [
+        0,
+        0
+      ],
+      "anchor": "all-time high",
+      "type": "vocab",
+      "head": "all-time high",
+      "zh": "历史最高点。remain near its all-time high = 仍贴近历史新高。和 10/11 期美股晨读重复巩固。"
+    },
+    {
+      "p": [
+        0,
+        1
+      ],
+      "anchor": "wavering between small gains and losses",
+      "type": "grammar",
+      "head": "waver between A and B",
+      "zh": "在 A 与 B 之间摇摆不定。写盘中反复翻红翻绿：waver / oscillate / pinball between gains and losses。"
+    },
+    {
+      "p": [
+        0,
+        1
+      ],
+      "anchor": "benchmark index",
+      "type": "vocab",
+      "head": "benchmark",
+      "zh": "基准（指数）。the benchmark index 常特指标普 500。benchmark rate = 基准利率。"
+    },
+    {
+      "p": [
+        0,
+        3
+      ],
+      "anchor": "led by communication services stocks",
+      "type": "grammar",
+      "head": "led by",
+      "zh": "由…领涨/领跌。被动结构：Shares rose, led by X = 在 X 带动下上涨。财经开篇固定句式。"
+    },
+    {
+      "p": [
+        0,
+        5
+      ],
+      "anchor": "dragged the market into the red",
+      "type": "idiom",
+      "head": "into the red",
+      "zh": "跌入亏损区、翻绿。drag A into the red = 把 A 拖进下跌。反义 into the black（翻红盈利）。"
+    },
+    {
+      "p": [
+        0,
+        6
+      ],
+      "anchor": "gave up 1.3%",
+      "type": "idiom",
+      "head": "give up (gains)",
+      "zh": "回吐、跌去。gave up 1.3% = 跌了 1.3%（常暗示此前涨过又吐回去）。也说 gave back / surrendered。"
+    },
+    {
+      "p": [
+        0,
+        6
+      ],
+      "anchor": "heavy influence on the market",
+      "type": "vocab",
+      "head": "heavy influence",
+      "zh": "重大影响。大市值股 have a heavy influence = 权重高、牵一发动全身。= outsized / outsize influence。"
+    },
+    {
+      "p": [
+        0,
+        6
+      ],
+      "anchor": "the driving force behind",
+      "type": "idiom",
+      "head": "driving force",
+      "zh": "推动力、主力。the driving force behind the rally = 本轮上涨的核心推手。"
+    },
+    {
+      "p": [
+        0,
+        7
+      ],
+      "anchor": "face more scrutiny",
+      "type": "vocab",
+      "head": "scrutiny",
+      "zh": "严格审视、仔细核查。face scrutiny from investors = 面临投资者更严苛的拷问。财报季高频词。"
+    },
+    {
+      "p": [
+        0,
+        7
+      ],
+      "anchor": "the frenzy over artificial intelligence",
+      "type": "vocab",
+      "head": "frenzy",
+      "zh": "狂热、躁动。the AI frenzy = AI 热潮。带一点“过热”色彩，比 boom / boomlet 更口语夸张。"
+    },
+    {
+      "p": [
+        0,
+        7
+      ],
+      "anchor": "can translate into future growth",
+      "type": "grammar",
+      "head": "translate into",
+      "zh": "转化为、体现为。gains translate into growth = 涨幅能否变成真增长。商业英语固定搭配。"
+    },
+    {
+      "p": [
+        1,
+        0
+      ],
+      "anchor": "reaching for records",
+      "type": "idiom",
+      "head": "reach for records",
+      "zh": "一再冲击纪录高位。reach for = 伸手去够，喻股价不断试探新高。和 ran toward records 同族。"
+    },
+    {
+      "p": [
+        1,
+        0
+      ],
+      "anchor": "very volatile on a daily basis",
+      "type": "vocab",
+      "head": "volatile / on a daily basis",
+      "zh": "波动剧烈的；按日计。on a daily basis = 日度层面。写“日线晃、趋势仍上”常用。"
+    },
+    {
+      "p": [
+        1,
+        1
+      ],
+      "anchor": "to settle at $106.65",
+      "type": "idiom",
+      "head": "settle at",
+      "zh": "收于、定格在。oil settled at… = 结算/收盘价。与 10/11 期 settle at 巩固。"
+    },
+    {
+      "p": [
+        1,
+        1
+      ],
+      "anchor": "swinging between $96 and nearly $110",
+      "type": "grammar",
+      "head": "swing between A and B",
+      "zh": "在 A 与 B 之间大幅摆动。写油价/汇率区间震荡：swing / bounce / pinball between。"
+    },
+    {
+      "p": [
+        1,
+        2
+      ],
+      "anchor": "a key focus this week",
+      "type": "vocab",
+      "head": "key focus",
+      "zh": "本周关键关注点。be a key focus = 成为市场盯盘核心。也说 top of mind / front and center。"
+    },
+    {
+      "p": [
+        1,
+        3
+      ],
+      "anchor": "closely-watched consumer price index",
+      "type": "vocab",
+      "head": "closely-watched",
+      "zh": "备受关注的。closely-watched CPI / data / vote。和 high-profile 近义，偏“市场盯着看”。"
+    },
+    {
+      "p": [
+        1,
+        3
+      ],
+      "anchor": "inflation worsened to 3.6%",
+      "type": "grammar",
+      "head": "worsen to",
+      "zh": "恶化至…。通胀“恶化”用 worsen（升到更高），冷却用 cool / ease。注意主语是 the rate of inflation。"
+    }
+  ],
+  "review_words": [
+    {
+      "word": "waver",
+      "ipa": "/ˈweɪvər/",
+      "zh": "v. 摇摆；犹豫不决",
+      "example": "The index spent the day wavering between gains and losses."
+    },
+    {
+      "word": "benchmark",
+      "ipa": "/ˈbentʃmɑːrk/",
+      "zh": "n. 基准（指数/利率）",
+      "example": "The benchmark index is still near its record high."
+    },
+    {
+      "word": "slide",
+      "ipa": "/slaɪd/",
+      "zh": "n./v. 下滑，下跌",
+      "example": "A slide in big tech dragged the market into the red."
+    },
+    {
+      "word": "scrutiny",
+      "ipa": "/ˈskruːtəni/",
+      "zh": "n. 仔细审视，严格核查",
+      "example": "Chipmakers face more scrutiny during earnings season."
+    },
+    {
+      "word": "frenzy",
+      "ipa": "/ˈfrenzi/",
+      "zh": "n. 狂热，躁动",
+      "example": "Stock gains came during the frenzy over artificial intelligence."
+    },
+    {
+      "word": "translate",
+      "ipa": "/trænsˈleɪt/",
+      "zh": "v. 转化为；翻译",
+      "example": "Can AI hype translate into future growth?"
+    },
+    {
+      "word": "volatile",
+      "ipa": "/ˈvɑːlətl/",
+      "zh": "adj. 波动剧烈的",
+      "example": "Markets remain very volatile on a daily basis."
+    },
+    {
+      "word": "settle",
+      "ipa": "/ˈsetl/",
+      "zh": "v. （价格）收于、结算于",
+      "example": "Brent crude rose 1.8% to settle at $106.65."
+    },
+    {
+      "word": "swing",
+      "ipa": "/swɪŋ/",
+      "zh": "v./n. 摆动，大幅波动",
+      "example": "Oil has been swinging between $96 and nearly $110."
+    },
+    {
+      "word": "surge",
+      "ipa": "/sɜːrdʒ/",
+      "zh": "n./v. 激增，飙升",
+      "example": "The surge in energy prices will be a key focus."
+    },
+    {
+      "word": "closely-watched",
+      "ipa": "/ˌkloʊsli ˈwɑːtʃt/",
+      "zh": "adj. 备受关注的",
+      "example": "Investors await the closely-watched consumer price index."
+    },
+    {
+      "word": "worsen",
+      "ipa": "/ˈwɜːrsn/",
+      "zh": "v. 恶化，变得更糟",
+      "example": "Economists expect inflation to have worsened to 3.6%."
+    }
+  ],
+  "patterns": [
+    {
+      "pattern": "A kicked off … with a mixed finish, although B remained …",
+      "zh": "A 以涨跌互现收官开局，尽管 B 仍…",
+      "from": "Wall Street kicked off a busy week on Monday with a mixed finish for the major U.S. stock indexes, although the market remained near its all-time high.",
+      "model": "The team kicked off the season with a mixed finish, although morale remained high.",
+      "model_zh": "球队以胜负参半开季，尽管士气仍高。"
+    },
+    {
+      "pattern": "Despite those gains, a slide in A dragged B into the red",
+      "zh": "尽管有那些涨幅，A 的下滑把 B 拖进下跌",
+      "from": "Despite those gains, a slide in big technology stocks dragged the market into the red.",
+      "model": "Despite those gains, a slide in cloud stocks dragged the Nasdaq into the red.",
+      "model_zh": "尽管有那些涨幅，云股下滑把纳指拖进下跌。"
+    },
+    {
+      "pattern": "whether A can translate into B",
+      "zh": "A 能否转化为 B",
+      "from": "…whether the stock gains made during the frenzy over artificial intelligence can translate into future growth.",
+      "model": "Investors asked whether the user growth can translate into higher profits.",
+      "model_zh": "投资者追问用户增长能否转化为更高利润。"
+    },
+    {
+      "pattern": "A will be a key focus … as B reviews C",
+      "zh": "在 B 审视 C 之际，A 将成为关键焦点",
+      "from": "The surge in energy prices and its impact on the broader economy will be a key focus this week as Wall Street reviews several important economic updates.",
+      "model": "Jobless claims will be a key focus this week as traders review the Fed minutes.",
+      "model_zh": "在交易员研读美联储纪要之际，初请失业金将成为本周关键焦点。"
+    }
+  ],
+  "podcast": {
+    "show": "Marketplace (APM)",
+    "title": "Outlooks, bank earnings, and a Nobel win",
+    "date": "2026-10-12",
+    "url": "https://www.marketplace.org/episode/2026/10/12/outlooks-bank-earnings-and-a-nobel-win",
+    "zh": "周一 Marketplace：通胀与利率展望、本周大银行财报，以及诺贝尔经济学奖。和今天 AP 收盘文同一天背景（油价、CPI、银行季报），适合泛听抓 bank earnings / rate hike 线索。"
+  },
+  "audio": {
+    "normal": "audio.mp3",
+    "slow": "audio-slow.mp3",
+    "voice": "en-US-AriaNeural"
+  }
+}

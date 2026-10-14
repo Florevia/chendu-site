@@ -1,0 +1,286 @@
+{
+  "date": "2026-10-11",
+  "topic": "stocks",
+  "topic_label": "美股",
+  "issue_title_zh": "美股收官周收涨：油价悠悠、国债收益率摇摆、电信股遭 SpaceX 冲击",
+  "lead_zh": "今天读美联社（AP）周五收盘综述。记录周收涨，但油价 yo-yo、国债收益率来回翻、无线运营商大跌——典型“指数涨、板块散”的一天。重点看：yo-yo / flipped up and down / eked out / the pressure is on 这类财经套话。",
+  "article": {
+    "title": "Wall Street finishes its record-setting week with gains",
+    "author": "Stan Choe",
+    "source": "The Associated Press",
+    "published": "2026-10-09 13:16 PDT（北京时间 10 月 10 日 04:16；10 月 10 日各报转载）",
+    "url": "https://www.minotdailynews.com/uncategorized/2026/10/stocks-finishes-week-with-gains-others-indecisive/",
+    "url_label": "AP 原文（Minot Daily News 转载）",
+    "alt_urls": [
+      {
+        "label": "The Manila Times 转载",
+        "url": "https://www.manilatimes.net/2026/10/10/business/foreign-business/wall-street-finishes-its-record-setting-week-with-gains/2442983"
+      },
+      {
+        "label": "AP News 指数一览",
+        "url": "https://apnews.com/article/wall-street-stocks-dow-nasdaq-dafbd0c4037ee10e2a9e305f3cfa8e70"
+      }
+    ],
+    "excerpt_note": "节选自原文开篇与华尔街板块段落（约 380 词）。版权归 The Associated Press 所有，仅供个人学习，完整报道请看原文。",
+    "sections": [
+      [
+        "NEW YORK (AP) -- The U.S. stock market finished its record-setting week with gains on Friday, even as other financial markets remained indecisive.",
+        "The S&P 500 climbed 0.6% for its first gain since setting its all-time high three days earlier. The Dow Jones Industrial Average added 423 points, or 0.8%, and the Nasdaq composite rose 0.6%.",
+        "The strength came as oil prices continued to yo-yo because of uncertainty about when the war with Iran will allow the global energy industry to return to normal. The price for a barrel of Brent crude bounced between $102.50 and $105 before settling at $104.72, up 0.4%.",
+        "Treasury yields flipped up and down in the bond market following their own sharp moves earlier in the week. The yield on the 10-year Treasury eventually climbed to 5.24% from 5.22% late Thursday.",
+        "High yields threaten to slow the economy by making borrowing money more expensive for everyone, and the average 30-year fixed-rate mortgage has already leaped to its highest level in nearly three years."
+      ],
+      [
+        "On Wall Street, Humana rallied 11.6% and helped lift the U.S. stock market despite the swings in the oil and bond markets. The insurer said it received encouraging data about its quality ratings versus its competitors for Medicare Advantage plans.",
+        "Companies that own cell towers were also at the front of the market, including leaps of 15.6% for Crown Castle and 9.3% for American Tower.",
+        "They rallied after SpaceX announced a purchase that could help it become a major mobile carrier in the United States. It still needs to get approval from U.S. regulators, but SpaceX said the purchase of low-band spectrum would allow its Starlink Mobile business to have a signal that can penetrate walls and connect customers inside buildings who may not be able to access its satellites. SpaceX\u2019s stock added 1.2%.",
+        "The threat of another big competitor sent stocks lower across the wireless industry, including drops of 13.3% for T-Mobile US, 9.8% for AT&T and 8.7% for Verizon.",
+        "The pressure is on companies broadly to deliver strong growth in profits after their stock prices ran toward records despite the downward push from high bond yields. Next week will bring high-profile profit reports from the country\u2019s biggest banks, including Citigroup, JPMorgan Chase and Wells Fargo all on Tuesday."
+      ]
+    ]
+  },
+  "notes": [
+    {
+      "p": [0, 0],
+      "anchor": "record-setting week",
+      "type": "vocab",
+      "head": "record-setting",
+      "zh": "创纪录的。record-setting week = 创下多项纪录的一周（指数曾刷历史新高）。也说 a record week。"
+    },
+    {
+      "p": [0, 0],
+      "anchor": "remained indecisive",
+      "type": "vocab",
+      "head": "indecisive",
+      "zh": "犹豫不决的、方向不明的。这里写油市/债市没有明确涨跌方向，和股市“收涨”形成对比。"
+    },
+    {
+      "p": [0, 1],
+      "anchor": "all-time high",
+      "type": "vocab",
+      "head": "all-time high",
+      "zh": "历史最高点。set / hit / top an all-time high。反义 all-time low。和上一期美股晨读重复出现，刻意巩固。"
+    },
+    {
+      "p": [0, 2],
+      "anchor": "continued to yo-yo",
+      "type": "idiom",
+      "head": "yo-yo (v.)",
+      "zh": "像悠悠球一样上下晃 → 来回剧烈波动。比 pinballing 更口语。名词：a yo-yo market。"
+    },
+    {
+      "p": [0, 2],
+      "anchor": "bounced between $102.50 and $105",
+      "type": "grammar",
+      "head": "bounce between A and B",
+      "zh": "在 A 与 B 之间来回跳。财经新闻写区间震荡的常用动词：bounce / pinball / oscillate between。"
+    },
+    {
+      "p": [0, 2],
+      "anchor": "before settling at $104.72",
+      "type": "idiom",
+      "head": "settle at",
+      "zh": "收于、定格在（某价位）。oil / futures settled at… = 结算价/收盘价。settle 在商品市场几乎是固定搭配。"
+    },
+    {
+      "p": [0, 3],
+      "anchor": "flipped up and down",
+      "type": "idiom",
+      "head": "flip up and down",
+      "zh": "来回翻转、上下翻腾。写收益率/价格日内反复变向。比 went up and down 更有画面感。"
+    },
+    {
+      "p": [0, 4],
+      "anchor": "threaten to slow the economy",
+      "type": "grammar",
+      "head": "threaten to do",
+      "zh": "有…的危险、可能会…。主语常是抽象事物（high yields / inflation）。不是“威胁某人”，而是“预示坏结果”。"
+    },
+    {
+      "p": [0, 4],
+      "anchor": "has already leaped to its highest level",
+      "type": "vocab",
+      "head": "leap",
+      "zh": "猛跳、跃升。leap to a high = 一下子蹿到高位。现在完成时 has leaped，强调已经发生且影响仍在。"
+    },
+    {
+      "p": [1, 0],
+      "anchor": "despite the swings",
+      "type": "grammar",
+      "head": "despite + noun",
+      "zh": "尽管有…。despite the swings = 尽管波动很大。后面直接跟名词短语，不加 of 从句（那是 in spite of the fact that…）。"
+    },
+    {
+      "p": [1, 1],
+      "anchor": "at the front of the market",
+      "type": "idiom",
+      "head": "at the front of the market",
+      "zh": "领涨、站在涨幅前列。= among the day’s biggest gainers。反义 at the back / lagged。"
+    },
+    {
+      "p": [1, 1],
+      "anchor": "including leaps of 15.6%",
+      "type": "vocab",
+      "head": "leap (n.)",
+      "zh": "大幅上涨（名词）。leaps of 15.6% = 暴涨 15.6%。涨跌名词族：leap / jump / surge vs drop / slide / plunge。"
+    },
+    {
+      "p": [1, 2],
+      "anchor": "low-band spectrum",
+      "type": "vocab",
+      "head": "spectrum",
+      "zh": "无线电频谱。low-band = 低频段（穿透力强，适合室内覆盖）。电信/卫星新闻高频词。"
+    },
+    {
+      "p": [1, 2],
+      "anchor": "penetrate walls",
+      "type": "vocab",
+      "head": "penetrate",
+      "zh": "穿透。信号 penetrate walls = 穿墙。也可用于市场：penetrate a new market 打入新市场。"
+    },
+    {
+      "p": [1, 3],
+      "anchor": "sent stocks lower across the wireless industry",
+      "type": "grammar",
+      "head": "send sth lower / higher",
+      "zh": "把…推低/推高。send stocks lower = 导致股价下跌。across the industry = 全行业范围内。"
+    },
+    {
+      "p": [1, 4],
+      "anchor": "The pressure is on companies broadly",
+      "type": "idiom",
+      "head": "the pressure is on",
+      "zh": "压力来了、该拿出表现了。broadly = 普遍地、整体上。= Companies are under broad pressure to…"
+    },
+    {
+      "p": [1, 4],
+      "anchor": "ran toward records",
+      "type": "idiom",
+      "head": "run toward records",
+      "zh": "一路奔向纪录高位。run 这里不是“跑步”，而是价格快速上行。despite the downward push = 尽管有向下的推力。"
+    },
+    {
+      "p": [1, 4],
+      "anchor": "high-profile profit reports",
+      "type": "vocab",
+      "head": "high-profile",
+      "zh": "高调的、备受关注的。high-profile earnings / cases / visits。这里指大银行财报，市场盯得很紧。"
+    }
+  ],
+  "review_words": [
+    {
+      "word": "indecisive",
+      "ipa": "/ˌɪndɪˈsaɪsɪv/",
+      "zh": "adj. 犹豫的；方向不明的",
+      "example": "Other financial markets remained indecisive on Friday."
+    },
+    {
+      "word": "yo-yo",
+      "ipa": "/ˈjoʊ joʊ/",
+      "zh": "v./n. （像悠悠球一样）上下波动",
+      "example": "Oil prices continued to yo-yo on war news."
+    },
+    {
+      "word": "settle",
+      "ipa": "/ˈsetl/",
+      "zh": "v. （价格）收于、结算于",
+      "example": "Brent crude settled at $104.72 a barrel."
+    },
+    {
+      "word": "flip",
+      "ipa": "/flɪp/",
+      "zh": "v. 翻转；突然变向",
+      "example": "Treasury yields flipped up and down all session."
+    },
+    {
+      "word": "leap",
+      "ipa": "/liːp/",
+      "zh": "v./n. 跃升；大幅上涨",
+      "example": "Mortgage rates leaped to a three-year high."
+    },
+    {
+      "word": "swing",
+      "ipa": "/swɪŋ/",
+      "zh": "n. 波动，摆动",
+      "example": "Stocks rose despite the swings in oil and bonds."
+    },
+    {
+      "word": "spectrum",
+      "ipa": "/ˈspektrəm/",
+      "zh": "n. 频谱；（喻）范围",
+      "example": "SpaceX bought low-band spectrum for mobile service."
+    },
+    {
+      "word": "penetrate",
+      "ipa": "/ˈpenətreɪt/",
+      "zh": "v. 穿透；打入",
+      "example": "The signal can penetrate walls inside buildings."
+    },
+    {
+      "word": "wireless",
+      "ipa": "/ˈwaɪərləs/",
+      "zh": "adj. 无线的；n. 无线通信业",
+      "example": "Wireless stocks fell on the SpaceX threat."
+    },
+    {
+      "word": "high-profile",
+      "ipa": "/ˌhaɪ ˈproʊfaɪl/",
+      "zh": "adj. 备受关注的",
+      "example": "Next week brings high-profile bank earnings."
+    },
+    {
+      "word": "broadly",
+      "ipa": "/ˈbrɔːdli/",
+      "zh": "adv. 普遍地，广泛地",
+      "example": "The pressure is on companies broadly to grow profits."
+    },
+    {
+      "word": "downward",
+      "ipa": "/ˈdaʊnwərd/",
+      "zh": "adj./adv. 向下的（地）",
+      "example": "High yields were a downward push on valuations."
+    }
+  ],
+  "patterns": [
+    {
+      "pattern": "A finished … with gains, even as B remained …",
+      "zh": "A 收涨收官，尽管 B 仍…",
+      "from": "The U.S. stock market finished its record-setting week with gains on Friday, even as other financial markets remained indecisive.",
+      "model": "The team finished the season with wins, even as injuries remained a worry.",
+      "model_zh": "球队以连胜收官赛季，尽管伤病仍是隐患。"
+    },
+    {
+      "pattern": "A continued to yo-yo because of uncertainty about …",
+      "zh": "因对…的不确定，A 继续上下晃",
+      "from": "…oil prices continued to yo-yo because of uncertainty about when the war with Iran will allow the global energy industry to return to normal.",
+      "model": "Bitcoin continued to yo-yo because of uncertainty about the next rate decision.",
+      "model_zh": "比特币因下次利率决议的不确定而继续剧烈波动。"
+    },
+    {
+      "pattern": "The threat of A sent B lower across C",
+      "zh": "A 的威胁把 C 范围内的 B 集体打低",
+      "from": "The threat of another big competitor sent stocks lower across the wireless industry…",
+      "model": "The threat of new regulation sent shares lower across the fintech industry.",
+      "model_zh": "新监管的威胁让金融科技板块股价普遍下跌。"
+    },
+    {
+      "pattern": "The pressure is on sb to do sth after …",
+      "zh": "在…之后，某人面临必须做出…的压力",
+      "from": "The pressure is on companies broadly to deliver strong growth in profits after their stock prices ran toward records…",
+      "model": "The pressure is on the startup to show real users after its valuation ran toward records.",
+      "model_zh": "估值冲向纪录之后，这家创业公司面临必须拿出真实用户的压力。"
+    }
+  ],
+  "podcast": {
+    "show": "Marketplace (APM)",
+    "title": "The stock market isn’t the economy — except when maybe it is?",
+    "date": "2026-10-09",
+    "url": "https://www.marketplace.org/story/2026/10/09/the-stock-market-isnt-the-economy-except-when-it-might-be",
+    "zh": "本周 Weekly Wrap：标普再创新高，但国债收益率、通胀与伊朗战争仍在；讨论“股市≠经济”这句话现在还成不成立。和今天 AP 收盘文同一周背景，适合泛听抓观点。"
+  },
+  "audio": {
+    "normal": "audio.mp3",
+    "slow": "audio-slow.mp3",
+    "voice": "en-US-AriaNeural"
+  }
+}

@@ -36,9 +36,9 @@ button{font:inherit;cursor:pointer}
 .lg.t-grammar{border-bottom:2px solid var(--grammar)}
 .lg.t-idiom{background:var(--idiom-bg)}
 .toggle{border:1px solid var(--rule);background:#fff;border-radius:99px;padding:2px 10px;font-size:12px;color:var(--ink)}
-.mhint{display:none;font-family:var(--hand-zh);font-size:16px;color:var(--grammar)}
+.mhint{display:none;font-family:var(--sans);font-size:16px;color:var(--grammar)}
 .lg.t-user{background:var(--user-hl);border-radius:2px}
-.uhint{font-family:var(--hand-zh);font-size:16px;color:var(--user)}
+.uhint{font-family:var(--sans);font-size:16px;color:var(--user)}
 
 /* article grid: note | text | note */
 .article{max-width:1240px;margin:8px auto 0;padding:0 20px}
@@ -50,7 +50,7 @@ button{font:inherit;cursor:pointer}
 .gap{text-align:center;color:var(--muted);font-family:var(--serif);letter-spacing:.3em;margin:0 0 1.1em}
 
 mark.hl{background:none;color:inherit;cursor:pointer;padding:0 1px;border-radius:2px;transition:background .15s}
-mark.hl sup{font-family:var(--hand-en);font-size:15px;font-weight:700;margin-left:1px;line-height:0}
+mark.hl sup{font-family:var(--sans);font-size:15px;font-weight:700;margin-left:1px;line-height:0}
 mark.t-vocab{text-decoration:underline wavy var(--vocab);text-decoration-thickness:1.5px;text-underline-offset:5px}
 mark.t-vocab sup{color:var(--vocab)}
 mark.t-grammar{text-decoration:underline solid var(--grammar);text-decoration-thickness:2px;text-underline-offset:5px}
@@ -61,15 +61,15 @@ mark.hl.active.t-vocab{background:var(--vocab-bg)}
 mark.hl.active.t-grammar{background:var(--grammar-bg)}
 mark.hl.active.t-idiom{background:var(--idiom-bg)}
 
-.note{position:relative;max-width:300px;width:100%;font-family:var(--hand-zh);font-size:17px;line-height:1.45;
+.note{position:relative;max-width:300px;width:100%;font-family:var(--sans);font-size:17px;line-height:1.45;
   color:var(--c);transform:rotate(var(--tilt,0deg));padding:4px 6px 6px 30px;border-radius:3px;transition:background .15s,transform .15s}
 .note.t-vocab{--c:var(--vocab);--bg:var(--vocab-bg)}
 .note.t-grammar{--c:var(--grammar);--bg:var(--grammar-bg)}
 .note.t-idiom{--c:var(--idiom);--bg:rgba(47,138,62,.10)}
 .note .num{position:absolute;left:2px;top:4px;width:22px;height:22px;border:1.6px solid var(--c);border-radius:50%;
-  font-family:var(--hand-en);font-size:17px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1}
+  font-family:var(--sans);font-size:17px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1}
 .note .tag{font-family:var(--sans);font-size:10px;letter-spacing:.08em;opacity:.75;border:1px solid currentColor;border-radius:3px;padding:0 4px;margin-right:6px;vertical-align:2px}
-.note .nh{display:inline;font-synthesis:none;font-family:var(--hand-en);font-size:23px;font-weight:700;line-height:1.1}
+.note .nh{display:inline;font-family:var(--sans);font-size:23px;font-weight:700;line-height:1.1}
 .note .nz{margin-top:2px;color:#2f2b25;opacity:.92}
 .note .nz b{color:var(--c)}
 .note.active{background:var(--bg);transform:rotate(0deg) scale(1.02)}
@@ -92,7 +92,7 @@ sup.un-sup,mark.hl sup.un-sup{font-family:var(--sans);font-size:12px;font-weight
   font-size:16px;padding:11px 22px;box-shadow:0 8px 24px -6px rgba(90,45,0,.6),0 0 0 3px rgba(255,255,255,.85)}
 .un-editor{position:absolute;z-index:60;background:#fffdf6;border:1px solid #ecd9b8;border-radius:12px;padding:10px 12px 10px;
   box-shadow:0 14px 34px -14px rgba(60,35,5,.45)}
-.ue-h{font-family:var(--hand-zh);font-size:18px;color:var(--user);line-height:1.2}
+.ue-h{font-family:var(--sans);font-size:18px;color:var(--user);line-height:1.2}
 .ue-q{font-family:var(--serif);font-style:italic;font-size:14px;line-height:1.45;color:var(--muted);border-left:3px solid var(--user-hl-on);
   padding-left:8px;margin:4px 0 8px;max-height:4.4em;overflow:hidden}
 .un-editor textarea{display:block;width:100%;min-height:76px;resize:vertical;font:16px/1.5 var(--sans);color:var(--ink);background:#fff;

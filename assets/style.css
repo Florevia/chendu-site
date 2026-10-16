@@ -61,15 +61,15 @@ mark.hl.active.t-vocab{background:var(--vocab-bg)}
 mark.hl.active.t-grammar{background:var(--grammar-bg)}
 mark.hl.active.t-idiom{background:var(--idiom-bg)}
 
-.note{position:relative;max-width:300px;width:100%;font-family:var(--sans);font-size:17px;line-height:1.45;
+.note{position:relative;max-width:300px;width:100%;font-family:var(--serif);font-size:17px;line-height:1.45;
   color:var(--c);transform:rotate(var(--tilt,0deg));padding:4px 6px 6px 30px;border-radius:3px;transition:background .15s,transform .15s}
 .note.t-vocab{--c:var(--vocab);--bg:var(--vocab-bg)}
 .note.t-grammar{--c:var(--grammar);--bg:var(--grammar-bg)}
 .note.t-idiom{--c:var(--idiom);--bg:rgba(47,138,62,.10)}
 .note .num{position:absolute;left:2px;top:4px;width:22px;height:22px;border:1.6px solid var(--c);border-radius:50%;
-  font-family:var(--sans);font-size:17px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1}
-.note .tag{font-family:var(--sans);font-size:10px;letter-spacing:.08em;opacity:.75;border:1px solid currentColor;border-radius:3px;padding:0 4px;margin-right:6px;vertical-align:2px}
-.note .nh{display:inline;font-family:var(--sans);font-size:23px;font-weight:700;line-height:1.1}
+  font-family:var(--serif);font-size:17px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1}
+.note .tag{font-family:var(--serif);font-size:10px;letter-spacing:.08em;opacity:.75;border:1px solid currentColor;border-radius:3px;padding:0 4px;margin-right:6px;vertical-align:2px}
+.note .nh{display:inline;font-family:var(--serif);font-size:23px;font-weight:700;line-height:1.1}
 .note .nz{margin-top:2px;color:#2f2b25;opacity:.92}
 .note .nz b{color:var(--c)}
 .note.active{background:var(--bg);transform:rotate(0deg) scale(1.02)}

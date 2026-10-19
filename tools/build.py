@@ -278,15 +278,16 @@ def render_issue(d, prev_d, next_d):
               '<span class="lg t-idiom">地道表达</span><span class="lg t-user">我的笔记</span>'
               '<button id="toggle-all" class="toggle">展开全部笔记</button>'
               '<span class="mhint">👆 点彩色划线看笔记</span>'
-              '<span class="uhint">✏️ 选中原文即可加自己的笔记</span></div>')
+              '<span class="uhint">✏️ 选中标题或原文即可加自己的笔记</span></div>')
     mynotes = ('<section class="block mynotes" id="mynotes" hidden><h2 class="hand">我的笔记</h2>'
                '<p class="hint">只保存在这台设备的浏览器里（localStorage），不会上传。</p>'
                '<div class="mn-body"></div></section>')
 
-    ui_text = (SITE_NAME + SITE_TAGLINE + "听朗读音频复习词可以模仿的句型延伸收听播客全部往期正常语速慢速今日精读点彩色划线看笔记展开收起全部笔记词汇语法地道表达原文"
-               "我的笔记加编辑删除保存取消已复制导出全部还没有选中即可自己写下理解条撤销位置未找到")
-    subset_font(FONT_SRC_ZH, json.dumps({k: v for k, v in d.items() if k != "_dir"}, ensure_ascii=False) + ui_text,
-                dirp / "zh-hand.woff2")
+    ui_text = (SITE_NAME + SITE_TAGLINE + "听朗读音频复习词可以模仿的句型延伸收听播客全部往期正常语速慢速今日精读"
+               "我的笔记")
+    # Margin notes, markers, and note hints use --sans. Keep ZhHand for the brand, lead, and section headings.
+    hand_src = {k: v for k, v in d.items() if k not in ("_dir", "notes")}
+    subset_font(FONT_SRC_ZH, json.dumps(hand_src, ensure_ascii=False) + ui_text, dirp / "zh-hand.woff2")
 
     page = head(f"{a['title']} · {SITE_NAME} {d['date']}", d.get("issue_title_zh", ""), "../../", "zh-hand.woff2") + f"""<body class="issue" data-issue="{esc(d['date'])}">
 <header class="top"><a class="brand hand-zh" href="../../">{SITE_NAME}</a><span class="date">{date_zh(d['date'])}</span></header>
@@ -340,8 +341,9 @@ def render_index(issues):
         f'<span class="topic t-{esc(d["topic"])}">{esc(TOPIC_LABEL.get(d["topic"], d["topic"]))}</span>'
         f'<span class="t">{esc(d["article"]["title"])}<small>{esc(d.get("issue_title_zh", ""))}</small></span></a></li>'
         for d in reversed(issues))
-    text = SITE_NAME + SITE_TAGLINE + "往期最新一期开始读条批注个复习词周一二三四五六日年月" + "".join(
-        d.get("issue_title_zh", "") + d.get("lead_zh", "") for d in issues)
+    # Home titles and the byline use --sans. ZhHand still covers the brand, tagline, date kicker, and lead.
+    text = SITE_NAME + SITE_TAGLINE + "往期最新一期开始读周一二三四五六日年月" + "".join(
+        date_zh(d["date"]) + (d.get("lead_zh") or "") for d in issues)
     subset_font(FONT_SRC_ZH, text, ROOT / "assets" / "fonts" / "zh-hand-index.woff2")
     page = head(f"{SITE_NAME} · 每日英文精读", SITE_TAGLINE, "", asset_url("", "fonts/zh-hand-index.woff2")) + f"""<body class="home">
 <header class="masthead"><h1 class="brand hand-zh">{SITE_NAME}</h1><p class="tag hand-zh">{SITE_TAGLINE}</p></header>

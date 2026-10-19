@@ -28,6 +28,10 @@ button{font:inherit;cursor:pointer}
 .topic.t-stocks{background:#1d6b52}.topic.t-ai{background:#5b3fa6}
 .title{font-family:var(--serif);font-size:clamp(26px,4.2vw,40px);line-height:1.18;margin:10px 0 8px;letter-spacing:-.01em}
 .zh-title{margin:0 0 6px;color:#4a463e;font-size:16px}
+.title-notes{margin:0 0 8px}
+.title-notes:empty{display:none}
+.title-notes .note{max-width:none;width:100%;transform:none;margin:8px 0 0}
+.title-notes .note.active{transform:none}
 .byline{color:var(--muted);font-size:14px;margin:6px 0 14px}
 .lead{font-size:20px;line-height:1.55;color:#5a4a2c;background:#fff6d9;padding:12px 16px;border-radius:4px;transform:rotate(-.3deg);box-shadow:0 1px 0 rgba(0,0,0,.05)}
 .legend{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:13px;margin:18px 0 6px;color:var(--muted)}
@@ -44,6 +48,18 @@ button{font:inherit;cursor:pointer}
 .article{max-width:1240px;margin:8px auto 0;padding:0 20px}
 .row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,40rem) minmax(0,1fr);grid-template-areas:"l t r";column-gap:34px;align-items:start}
 .para{grid-area:t;font-family:var(--serif);font-size:20px;line-height:1.85;margin:0 0 1.15em;hyphens:manual}
+.para-col{grid-area:t;min-width:0}
+.para-col .para{grid-area:auto;margin-bottom:.15em}
+.para-tr{margin:0 0 .85em}
+.tr-add,.tr-edit,.tr-clear{border:none;background:none;padding:0;font-family:var(--sans);font-size:13px;line-height:1.4;color:var(--muted)}
+.tr-add:hover,.tr-edit:hover,.tr-clear:hover,.tr-add:focus-visible,.tr-edit:focus-visible,.tr-clear:focus-visible{color:var(--ink)}
+.tr-view{margin:2px 0 0;padding:1px 0 1px 10px;border-left:2px solid var(--rule);font-family:var(--sans);font-size:16px;line-height:1.7;color:#3d3a33;white-space:pre-wrap}
+.tr-edit{display:inline-block;margin-top:2px}
+.tr-box{margin-top:4px;background:#fff;border:1px solid var(--rule);border-radius:10px;padding:8px 10px 6px}
+.tr-box textarea{display:block;width:100%;min-height:4.8em;resize:vertical;border:none;background:transparent;padding:0;font:16px/1.65 var(--sans);color:var(--ink)}
+.tr-box textarea:focus{outline:none}
+.tr-bar{display:flex;align-items:center;gap:12px;margin-top:4px}
+.tr-status{font-family:var(--sans);font-size:12px;color:var(--muted)}
 .side{display:flex;flex-direction:column;gap:12px;padding-top:4px}
 .side.left{grid-area:l;align-items:flex-end}
 .side.right{grid-area:r;align-items:flex-start}
@@ -72,6 +88,8 @@ mark.hl.active.t-idiom{background:var(--idiom-bg)}
 .note .nh{display:inline;font-family:var(--serif);font-size:23px;font-weight:700;line-height:1.1}
 .note .nz{margin-top:2px;color:#2f2b25;opacity:.92}
 .note .nz b{color:var(--c)}
+.note .nz-line,.recall-zh .nz-line{display:block}
+.note .nz-ex,.recall-zh .nz-ex{font-style:italic}
 .note.active{background:var(--bg);transform:rotate(0deg) scale(1.02)}
 .side.left .note{text-align:left}
 
@@ -125,6 +143,30 @@ sup.un-sup,mark.hl sup.un-sup{font-family:var(--sans);font-size:12px;font-weight
 .bottom{max-width:46rem;margin:0 auto;padding:0 20px 30px}
 .block{margin-top:36px}
 .block h2{font-size:32px;margin:0 0 10px;color:var(--grammar);font-weight:700;font-family:var(--hand-zh)}
+.recall-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:0 0 10px}
+.recall-count{font-size:14px;color:var(--muted)}
+.recall-list{list-style:none;padding:0;margin:0}
+.recall-item{display:grid;grid-template-columns:28px 28px minmax(0,1fr);gap:4px 8px;align-items:start;
+  background:#fff;border:1px solid var(--rule);border-left:3px solid var(--c);border-radius:10px;padding:8px 12px 8px 10px;margin:0 0 8px}
+.recall-item.t-vocab{--c:var(--vocab)}
+.recall-item.t-grammar{--c:var(--grammar)}
+.recall-item.t-idiom{--c:var(--idiom)}
+.recall-tick{display:flex;align-items:center;justify-content:center;min-height:32px}
+.recall-tick input{width:18px;height:18px;margin:0;accent-color:var(--c)}
+.recall-num{display:flex;align-items:center;justify-content:center;width:26px;height:26px;margin-top:3px;
+  border:1.6px solid var(--c);border-radius:50%;color:var(--c);text-decoration:none;
+  font-family:var(--serif);font-size:14px;font-weight:700;line-height:1}
+.recall-num:hover{background:rgba(0,0,0,.04)}
+.recall-q{display:flex;flex-wrap:wrap;gap:6px 8px;align-items:baseline;width:100%;text-align:left;
+  border:none;background:none;padding:4px 0;font:inherit}
+.recall-item .tag{font-family:var(--serif);font-size:10px;letter-spacing:.08em;color:var(--c);border:1px solid var(--c);border-radius:3px;padding:0 4px}
+.recall-head{font-family:var(--serif);font-size:18px;font-weight:700;line-height:1.3;color:var(--ink)}
+.recall-item.is-done .recall-head{color:var(--muted);font-weight:600;text-decoration:line-through;text-decoration-thickness:1px}
+.recall-zh{display:none;margin:2px 0 4px;font-family:var(--serif);font-size:15px;line-height:1.5;color:#2f2b25}
+.recall-item.is-open .recall-zh{display:block}
+@media (hover:hover) and (pointer:fine){
+  .recall-item:hover .recall-zh{display:block}
+}
 .hint{color:var(--muted);font-size:14px;margin:0 0 10px}
 .player{background:#fff;border:1px solid var(--rule);border-radius:10px;padding:10px 14px;margin-bottom:10px}
 .pl{font-size:15px;margin-bottom:6px}.pl small{color:var(--muted)}
@@ -178,6 +220,11 @@ table.words{width:100%;border-collapse:collapse;background:#fff;border:1px solid
   .note.open{display:block}
   .mhint{display:inline}
   .un-act{font-size:13px;padding:6px 12px;border:1px solid currentColor;opacity:.85}
+  .tr-add,.tr-edit,.tr-clear{font-size:15px;padding:6px 0}
+  .recall-item{grid-template-columns:36px 36px minmax(0,1fr)}
+  .recall-tick{min-height:44px}
+  .recall-num{width:32px;height:32px;margin-top:6px}
+  .recall-q{padding:10px 0}
   .un-acts{gap:8px;margin-top:8px}
 }
 @media (max-width:560px){
@@ -188,4 +235,11 @@ table.words{width:100%;border-collapse:collapse;background:#fff;border:1px solid
   .words tr{display:block;border-bottom:1px solid #f0ebdf;padding:6px 0}
   .masthead .brand{font-size:52px}
 }
-@media print{.toggle,.say,.player,.mhint,.uhint,.un-fab,.un-editor,.un-toast,.un-acts,.mn-bar{display:none!important}.note{display:block!important}}
+@media print{
+  .toggle,.say,.player,.mhint,.uhint,.un-fab,.un-editor,.un-toast,.un-acts,.mn-bar,.tr-ui,.recall-hint{display:none!important}
+  .note{display:block!important}
+  .para-tr:not(.has-text){display:none!important}
+  .para-tr.has-text .tr-view{display:block!important}
+  .recall-item{break-inside:avoid}
+  .recall-zh{display:block!important}
+}

@@ -44,6 +44,18 @@ button{font:inherit;cursor:pointer}
 .article{max-width:1240px;margin:8px auto 0;padding:0 20px}
 .row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,40rem) minmax(0,1fr);grid-template-areas:"l t r";column-gap:34px;align-items:start}
 .para{grid-area:t;font-family:var(--serif);font-size:20px;line-height:1.85;margin:0 0 1.15em;hyphens:manual}
+.para-col{grid-area:t;min-width:0}
+.para-col .para{grid-area:auto;margin-bottom:.15em}
+.para-tr{margin:0 0 .85em}
+.tr-add,.tr-edit,.tr-clear{border:none;background:none;padding:0;font-family:var(--sans);font-size:13px;line-height:1.4;color:var(--muted)}
+.tr-add:hover,.tr-edit:hover,.tr-clear:hover,.tr-add:focus-visible,.tr-edit:focus-visible,.tr-clear:focus-visible{color:var(--ink)}
+.tr-view{margin:2px 0 0;padding:1px 0 1px 10px;border-left:2px solid var(--rule);font-family:var(--sans);font-size:16px;line-height:1.7;color:#3d3a33;white-space:pre-wrap}
+.tr-edit{display:inline-block;margin-top:2px}
+.tr-box{margin-top:4px;background:#fff;border:1px solid var(--rule);border-radius:10px;padding:8px 10px 6px}
+.tr-box textarea{display:block;width:100%;min-height:4.8em;resize:vertical;border:none;background:transparent;padding:0;font:16px/1.65 var(--sans);color:var(--ink)}
+.tr-box textarea:focus{outline:none}
+.tr-bar{display:flex;align-items:center;gap:12px;margin-top:4px}
+.tr-status{font-family:var(--sans);font-size:12px;color:var(--muted)}
 .side{display:flex;flex-direction:column;gap:12px;padding-top:4px}
 .side.left{grid-area:l;align-items:flex-end}
 .side.right{grid-area:r;align-items:flex-start}
@@ -178,6 +190,7 @@ table.words{width:100%;border-collapse:collapse;background:#fff;border:1px solid
   .note.open{display:block}
   .mhint{display:inline}
   .un-act{font-size:13px;padding:6px 12px;border:1px solid currentColor;opacity:.85}
+  .tr-add,.tr-edit,.tr-clear{font-size:15px;padding:6px 0}
   .un-acts{gap:8px;margin-top:8px}
 }
 @media (max-width:560px){
@@ -188,4 +201,9 @@ table.words{width:100%;border-collapse:collapse;background:#fff;border:1px solid
   .words tr{display:block;border-bottom:1px solid #f0ebdf;padding:6px 0}
   .masthead .brand{font-size:52px}
 }
-@media print{.toggle,.say,.player,.mhint,.uhint,.un-fab,.un-editor,.un-toast,.un-acts,.mn-bar{display:none!important}.note{display:block!important}}
+@media print{
+  .toggle,.say,.player,.mhint,.uhint,.un-fab,.un-editor,.un-toast,.un-acts,.mn-bar,.tr-ui{display:none!important}
+  .note{display:block!important}
+  .para-tr:not(.has-text){display:none!important}
+  .para-tr.has-text .tr-view{display:block!important}
+}

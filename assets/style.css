@@ -28,6 +28,10 @@ button{font:inherit;cursor:pointer}
 .topic.t-stocks{background:#1d6b52}.topic.t-ai{background:#5b3fa6}
 .title{font-family:var(--serif);font-size:clamp(26px,4.2vw,40px);line-height:1.18;margin:10px 0 8px;letter-spacing:-.01em}
 .zh-title{margin:0 0 6px;color:#4a463e;font-size:16px}
+.title-notes{margin:0 0 8px}
+.title-notes:empty{display:none}
+.title-notes .note{max-width:none;width:100%;transform:none;margin:8px 0 0}
+.title-notes .note.active{transform:none}
 .byline{color:var(--muted);font-size:14px;margin:6px 0 14px}
 .lead{font-size:20px;line-height:1.55;color:#5a4a2c;background:#fff6d9;padding:12px 16px;border-radius:4px;transform:rotate(-.3deg);box-shadow:0 1px 0 rgba(0,0,0,.05)}
 .legend{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:13px;margin:18px 0 6px;color:var(--muted)}

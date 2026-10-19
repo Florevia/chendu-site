@@ -278,7 +278,7 @@ def render_issue(d, prev_d, next_d):
               '<span class="lg t-idiom">地道表达</span><span class="lg t-user">我的笔记</span>'
               '<button id="toggle-all" class="toggle">展开全部笔记</button>'
               '<span class="mhint">👆 点彩色划线看笔记</span>'
-              '<span class="uhint">✏️ 选中原文即可加自己的笔记</span></div>')
+              '<span class="uhint">✏️ 选中标题或原文即可加自己的笔记</span></div>')
     mynotes = ('<section class="block mynotes" id="mynotes" hidden><h2 class="hand">我的笔记</h2>'
                '<p class="hint">只保存在这台设备的浏览器里（localStorage），不会上传。</p>'
                '<div class="mn-body"></div></section>')

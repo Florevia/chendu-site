@@ -3,7 +3,35 @@
   var coarse = window.matchMedia('(pointer:coarse)');
   var article = document.querySelector('article.article');
   var paras = article ? [].slice.call(article.querySelectorAll('p.para')) : [];
+  var titleNodes = [];
+  var titleEl = document.querySelector('h1.title');
+  var zhTitleEl = titleEl && titleEl.nextElementSibling && titleEl.nextElementSibling.classList.contains('zh-title')
+    ? titleEl.nextElementSibling : null;
+  if(titleEl) titleNodes.push(titleEl);
+  if(zhTitleEl) titleNodes.push(zhTitleEl);
+  var titleNotesHost = null;
+  if(titleNodes.length){
+    titleNotesHost = el('div', 'title-notes');
+    (zhTitleEl || titleEl).parentNode.insertBefore(titleNotesHost, (zhTitleEl || titleEl).nextSibling);
+  }
   var MARKERS = 'mark.hl,.un-hl,.un-sup';
+  function nodeEl(node){ return !node ? null : (node.nodeType === 1 ? node : node.parentNode); }
+  function inTitle(node){
+    var e = nodeEl(node);
+    if(!e) return false;
+    for(var i = 0; i < titleNodes.length; i++) if(titleNodes[i].contains(e)) return true;
+    return false;
+  }
+  // "title" = English h1 and Chinese subtitle, together. "body" = article paragraphs.
+  // A drag that crosses the two is ignored so a note stays in one anchor space.
+  function selectionScope(r){
+    if(!r) return null;
+    var a = inTitle(r.startContainer), b = inTitle(r.endContainer);
+    if(a || b) return (a && b) ? 'title' : null;
+    var se = nodeEl(r.startContainer), ee = nodeEl(r.endContainer);
+    if(article && se && ee && article.contains(se) && article.contains(ee)) return 'body';
+    return null;
+  }
 
   function el(tag, cls, text){
     var e = document.createElement(tag);
@@ -69,7 +97,7 @@
 
   function selectingText(){
     var s = window.getSelection();
-    return s && !s.isCollapsed && article && s.rangeCount && s.getRangeAt(0).intersectsNode(article);
+    return s && !s.isCollapsed && s.rangeCount && !!selectionScope(s.getRangeAt(0));
   }
   document.addEventListener('click', function(e){
     var t = e.target;
@@ -78,7 +106,7 @@
     if(act){ noteAction(act.dataset.act, act.closest('[data-un]').dataset.un); return; }
     if(selectingText()) return;
     var m = t.closest(MARKERS);
-    if(m && article.contains(m)){ var k = keyOf(m); if(k) tap(k); return; }
+    if(m && ((article && article.contains(m)) || inTitle(m))){ var k = keyOf(m); if(k) tap(k); return; }
     if(t.closest('.note')) return;
     if(narrow.matches) closeAll();
   });
@@ -130,10 +158,12 @@
   }
   window.addEventListener('storage', function(e){ if(e.key === KEY){ notes = load(); render(); } });
 
-  // article text = paragraphs joined by "\n"; superscript numbers/markers are excluded
-  function textModel(){
+  // blocks joined by "\n"; superscript numbers/markers are excluded.
+  // Paragraph notes keep indexing only the article paragraphs, so older saved notes still resolve.
+  // Title notes (scope "title") index h1.title and p.zh-title instead.
+  function textModel(blocks){
     var list = [], text = '', pstart = [];
-    paras.forEach(function(p, pi){
+    (blocks || []).forEach(function(p, pi){
       if(pi) text += '\n';
       pstart.push(text.length);
       var w = document.createTreeWalker(p, NodeFilter.SHOW_TEXT, {acceptNode: function(n){
@@ -149,8 +179,8 @@
     return i;
   }
 
-  function rangeToAnchor(r){
-    var m = textModel(), s = Infinity, e = -1;
+  function rangeToAnchor(r, blocks){
+    var m = textModel(blocks), s = Infinity, e = -1;
     m.list.forEach(function(x){
       if(!r.intersectsNode(x.node)) return;
       var a = x.node === r.startContainer ? r.startOffset : 0;
@@ -179,8 +209,8 @@
     return best ? {start:best.start, end:best.start + q.length} : null;
   }
 
-  function wrap(start, end, id, extra){
-    var m = textModel(), segs = [];
+  function wrap(start, end, id, extra, blocks){
+    var m = textModel(blocks), segs = [];
     m.list.forEach(function(x){
       var a = Math.max(start, x.start), b = Math.min(end, x.start + x.node.length);
       if(b > a) segs.push({node:x.node, a:a - x.start, b:b - x.start});
@@ -199,14 +229,20 @@
     return last;
   }
 
-  function clearRendered(){
-    $all('.un-sup', article).forEach(function(s){ s.remove(); });
-    $all('.un-hl', article).forEach(function(s){
+  function unwrap(root){
+    if(!root) return;
+    $all('.un-sup', root).forEach(function(s){ s.remove(); });
+    $all('.un-hl', root).forEach(function(s){
       var p = s.parentNode;
       while(s.firstChild) p.insertBefore(s.firstChild, s);
       p.removeChild(s);
     });
+  }
+  function clearRendered(){
+    unwrap(article);
+    titleNodes.forEach(unwrap);
     paras.forEach(function(p){ p.normalize(); });
+    titleNodes.forEach(function(p){ p.normalize(); });
     $all('.note.t-user').forEach(function(n){ n.remove(); });
   }
 
@@ -238,27 +274,32 @@
   function render(){
     var openIds = $all('.note.t-user.open').map(function(n){ return n.dataset.un; });
     clearRendered();
-    var m = textModel(), changed = false;
+    var bodyModel = textModel(paras), titleModel = textModel(titleNodes), changed = false;
     notes.forEach(function(n){
-      var loc = locate(n, m);
+      var loc = locate(n, n.scope === 'title' ? titleModel : bodyModel);
       n._lost = !loc;
       if(loc && (loc.start !== n.start || loc.end !== n.end)){ n.start = loc.start; n.end = loc.end; changed = true; }
     });
     var placed = notes.filter(function(n){ return !n._lost; }).sort(function(a, b){ return a.start - b.start; });
     placed.forEach(function(n, i){
-      var last = wrap(n.start, n.end, n.id);
+      var blocks = n.scope === 'title' ? titleNodes : paras;
+      var last = wrap(n.start, n.end, n.id, null, blocks);
       if(last){
         var sup = el('sup', 'un-sup', '✎');
         sup.dataset.un = n.id; sup.tabIndex = 0;
         sup.setAttribute('role', 'button'); sup.setAttribute('aria-label', '我的笔记');
         last.parentNode.insertBefore(sup, last.nextSibling);
       }
-      var row = paras[paraIndexAt(m, n.start)].parentNode;
+      if(n.scope === 'title'){
+        if(titleNotesHost) titleNotesHost.appendChild(buildNote(n, i));
+        return;
+      }
+      var row = paras[paraIndexAt(bodyModel, n.start)].parentNode;
       var L = row.querySelector('.side.left'), R = row.querySelector('.side.right');
       var side = L.children.length < R.children.length ? L : R;
       side.appendChild(buildNote(n, i));
     });
-    if(pending) wrap(pending.start, pending.end, '__pending', 'pending');
+    if(pending) wrap(pending.start, pending.end, '__pending', 'pending', pending.scope === 'title' ? titleNodes : paras);
     openIds.forEach(function(id){
       var p = partsOf('u:' + id);
       if(p.note){ p.note.classList.add('open'); setActive('u:' + id, true); }
@@ -283,9 +324,11 @@
     var s = window.getSelection();
     if(!s || !s.rangeCount || s.isCollapsed){ hideFab(); return; }
     var r = s.getRangeAt(0);
-    if(!r.intersectsNode(article)){ hideFab(); return; }
-    var a = rangeToAnchor(r);
+    var scope = selectionScope(r);
+    if(!scope){ hideFab(); return; }
+    var a = rangeToAnchor(r, scope === 'title' ? titleNodes : paras);
     if(!a){ hideFab(); return; }
+    if(scope === 'title') a.scope = 'title';
     pendingSel = a;
     fab.hidden = false;
     var bar = barMode();
@@ -324,7 +367,7 @@
     var s = window.getSelection(); if(s) s.removeAllRanges();
     pending = a;
     render();
-    openEditor(null, $all('.un-hl.pending', article).pop());
+    openEditor(null, $all('.un-hl.pending').pop());
   }
   fab.addEventListener('touchstart', press, {passive:false});
   fab.addEventListener('touchend', fire, {passive:false});
@@ -376,8 +419,10 @@
       editing.text = text; editing.updated = now; id = editing.id;
     }else if(pending){
       id = now.toString(36) + Math.random().toString(36).slice(2, 6);
-      notes.push({id:id, quote:pending.quote, prefix:pending.prefix, suffix:pending.suffix,
-                  start:pending.start, end:pending.end, text:text, created:now, updated:now});
+      var rec = {id:id, quote:pending.quote, prefix:pending.prefix, suffix:pending.suffix,
+                 start:pending.start, end:pending.end, text:text, created:now, updated:now};
+      if(pending.scope) rec.scope = pending.scope;
+      notes.push(rec);
     }else return;
     var wasEdit = !!editing;
     pending = null; editing = null; ed.hidden = true;
@@ -419,7 +464,7 @@
     toast('已删除这条笔记', '撤销', function(){ notes.splice(i, 0, gone); save(); render(); });
   }
   function goTo(id){
-    var h = article.querySelector('.un-hl[data-un="' + id + '"]');
+    var h = document.querySelector('.un-hl[data-un="' + id + '"]');
     if(!h) return;
     h.scrollIntoView({block:'center', behavior:'smooth'});
     if(narrow.matches) openOnly('u:' + id, true);
@@ -457,13 +502,16 @@
     });
   }
   function ordered(){
-    return notes.slice().sort(function(a, b){ return (a._lost - b._lost) || (a.start - b.start); });
+    return notes.slice().sort(function(a, b){
+      var as = a.scope === 'title' ? 0 : 1, bs = b.scope === 'title' ? 0 : 1;
+      return (a._lost - b._lost) || (as - bs) || (a.start - b.start);
+    });
   }
   function renderList(){
     if(!listBody) return;
     listBody.textContent = '';
     if(!notes.length){
-      listBody.appendChild(el('p', 'mn-empty', '还没有笔记。选中原文里的词或句子（可以跨好几行），点「✏️ 加笔记」写下你自己的理解。'));
+      listBody.appendChild(el('p', 'mn-empty', '还没有笔记。选中标题或原文里的词或句子（可以跨好几行），点「✏️ 加笔记」写下你自己的理解。'));
       return;
     }
     var ol = el('ol', 'mn-list');

@@ -31,6 +31,112 @@ def md_lite(s):
     return re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", esc(s))
 
 
+_ABBR_TAIL = re.compile(r"(?:U\.S|U\.K|e\.g|i\.e|Mr|Mrs|Ms|Dr)$")
+_EXAMPLE_LABEL = re.compile(r"例(?:如|句)?[:：]\s*")
+_ONLY_PAREN = re.compile(r"^[（(][^）)]*[）)]$")
+
+
+def _cjk(ch):
+    return "\u4e00" <= ch <= "\u9fff"
+
+
+def _zh_sentences(s):
+    """Split on 。！？, but not on a period inside （） or ()."""
+    parts, buf, depth = [], [], 0
+    for ch in s:
+        if ch in "（(":
+            depth += 1
+        elif ch in "）)" and depth:
+            depth -= 1
+        buf.append(ch)
+        if depth == 0 and ch in "。！？":
+            parts.append("".join(buf).strip())
+            buf = []
+    tail = "".join(buf).strip()
+    if tail:
+        parts.append(tail)
+    return [p for p in parts if p]
+
+
+def _english_example_spans(s):
+    """Full English sentences (3+ words). Decimals (5.8%) and U.S. are not endings."""
+    spans, i, n = [], 0, len(s)
+    while i < n:
+        ch = s[i]
+        if ch.isascii() and ch.isupper() and (i == 0 or not (s[i - 1].isalpha() or s[i - 1] in "'’")):
+            j = i
+            while j < n:
+                c = s[j]
+                if c in ".!?":
+                    nxt = s[j + 1] if j + 1 < n else ""
+                    if nxt.isalpha() or nxt.isdigit():
+                        j += 1
+                        continue
+                    k = j + 1
+                    while k < n and s[k] in " \t":
+                        k += 1
+                    nxt2 = s[k] if k < n else ""
+                    prev = s[max(i, j - 4):j]
+                    if nxt2.islower() or _ABBR_TAIL.search(prev):
+                        j += 1
+                        continue
+                    words = re.findall(r"[A-Za-z][A-Za-z'’\-]*", s[i:j + 1])
+                    if len(words) >= 3 and (nxt2 == "" or _cjk(nxt2) or nxt2 in "，；。！？（(" or nxt2.isupper()):
+                        spans.append((i, j + 1))
+                        i = j
+                        break
+                if _cjk(c) or c in "，；：、":
+                    break
+                j += 1
+        i += 1
+    return spans
+
+
+def _explode_example(sent):
+    """Pull an English example sentence onto its own line when Chinese shares the sentence."""
+    spans = _english_example_spans(sent)
+    if not spans:
+        return [sent]
+    a, b = spans[0]
+    before, eng, after = sent[:a].strip(), sent[a:b].strip(), sent[b:].strip()
+    label = _EXAMPLE_LABEL.fullmatch(before or "")
+    if label:
+        eng = before + eng
+        before = ""
+    if _ONLY_PAREN.fullmatch(after or ""):
+        eng = eng + after
+        after = ""
+    out = []
+    if before:
+        out.append(before)
+    out.append(eng)
+    if after:
+        out.extend(_explode_example(after))
+    return out
+
+
+def _is_example_line(text):
+    t = text.strip()
+    if t.startswith("例：") or t.startswith("例:") or t.startswith("例如") or t.startswith("例句"):
+        return True
+    if re.match(r"[“\"']?[A-Z]", t):
+        words = re.findall(r"[A-Za-z][A-Za-z'’\-]*", t)
+        if len(words) >= 3 and re.search(r"[.!?]", t):
+            return True
+    return False
+
+
+def note_zh_html(s):
+    """Each gloss sentence on its own line; English example sentences get `.nz-ex`."""
+    lines = []
+    for sent in _zh_sentences(s):
+        lines.extend(_explode_example(sent))
+    return "".join(
+        f'<span class="nz-line nz-ex">{md_lite(line)}</span>' if _is_example_line(line)
+        else f'<span class="nz-line">{md_lite(line)}</span>'
+        for line in lines)
+
+
 def load_issues():
     out = []
     for f in sorted(ISSUES.glob("*/data.json")):
@@ -214,7 +320,27 @@ def render_note(num, n):
     tilt = [-1.2, 0.8, -0.5, 1.1, -0.9, 0.4][num % 6]
     return (f'<div class="note t-{n["type"]}" id="note-{num}" data-n="{num}" style="--tilt:{tilt}deg">'
             f'<span class="num">{num}</span><span class="tag">{TYPE_LABEL[n["type"]]}</span>'
-            f'<div class="nh">{esc(n["head"])}</div><div class="nz">{md_lite(n["zh"])}</div></div>')
+            f'<div class="nh">{esc(n["head"])}</div><div class="nz">{note_zh_html(n["zh"])}</div></div>')
+
+
+def render_recall(order, notes, num_of):
+    """Checklist of every margin note, in reading order, for recall at the end of the issue."""
+    items = []
+    for i in order:
+        n, num = notes[i], num_of[i]
+        items.append(
+            f'<li class="recall-item t-{n["type"]}" data-head="{esc(n["head"])}">'
+            f'<label class="recall-tick"><input type="checkbox" aria-label="已记住 {esc(n["head"])}"></label>'
+            f'<a class="recall-num" href="#note-{num}" data-n="{num}">{num}</a>'
+            f'<div class="recall-main"><button type="button" class="recall-q" aria-expanded="false">'
+            f'<span class="tag">{TYPE_LABEL[n["type"]]}</span>'
+            f'<span class="recall-head">{esc(n["head"])}</span></button>'
+            f'<div class="recall-zh">{note_zh_html(n["zh"])}</div></div></li>')
+    return ('<section class="block recall" id="recall"><h2 class="hand">批注回顾</h2>'
+            '<p class="hint recall-hint">先盖住释义，看着单词和短语自己回忆。点词条看释义，点序号回到原文。勾选只存在这台浏览器里。</p>'
+            '<div class="recall-bar"><span class="recall-count" id="recall-count"></span>'
+            '<button type="button" class="toggle" id="recall-reset">清空勾选</button></div>'
+            f'<ol class="recall-list">{"".join(items)}</ol></section>')
 
 
 def render_issue(d, prev_d, next_d):
@@ -283,8 +409,9 @@ def render_issue(d, prev_d, next_d):
                '<p class="hint">只保存在这台设备的浏览器里（localStorage），不会上传。</p>'
                '<div class="mn-body"></div></section>')
 
+    recall = render_recall(order, notes, num_of)
     ui_text = (SITE_NAME + SITE_TAGLINE + "听朗读音频复习词可以模仿的句型延伸收听播客全部往期正常语速慢速今日精读"
-               "我的笔记")
+               "我的笔记批注回顾")
     # Margin notes, markers, and note hints use --sans. Keep ZhHand for the brand, lead, and section headings.
     hand_src = {k: v for k, v in d.items() if k not in ("_dir", "notes")}
     subset_font(FONT_SRC_ZH, json.dumps(hand_src, ensure_ascii=False) + ui_text, dirp / "zh-hand.woff2")
@@ -307,6 +434,7 @@ def render_issue(d, prev_d, next_d):
 <p class="credit">{esc(a['excerpt_note'])}<br>原文链接：<a href="{esc(a['url'])}" target="_blank" rel="noopener">{esc(a.get('url_label', '原文'))}</a>{(' · ' + alt) if alt else ''}</p>
 </div>
 <div class="bottom">
+{recall}
 {audio_html}
 <section class="block"><h2 class="hand">复习词</h2><div class="tw"><table class="words"><tbody>{words}</tbody></table></div></section>
 <section class="block"><h2 class="hand">可以模仿的句型</h2><ol class="patterns">{pats}</ol></section>

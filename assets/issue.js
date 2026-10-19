@@ -109,7 +109,7 @@
   }
   document.addEventListener('click', function(e){
     var t = e.target;
-    if(!t.closest || t.closest('.un-fab,.un-editor,.un-toast,#toggle-all,.mynotes,.para-tr')) return;
+    if(!t.closest || t.closest('.un-fab,.un-editor,.un-toast,#toggle-all,.mynotes,.para-tr,#recall')) return;
     var act = t.closest('.un-act');
     if(act){ noteAction(act.dataset.act, act.closest('[data-un]').dataset.un); return; }
     if(selectingText()) return;
@@ -708,4 +708,85 @@
 
   mountTranslations();
   render();
+
+  /* ================================================ recall checklist
+     One row per margin note. The meaning stays hidden until hover (fine pointer)
+     or a tap. Checked heads are stored per issue, separate from reader notes. */
+  var recall = document.getElementById('recall');
+  if(recall){
+    var RKEY = 'chendu:recall:' + issueId;
+    var recallItems = $all('.recall-item', recall);
+    var recallCount = document.getElementById('recall-count');
+    function recallLoad(){
+      try{
+        var v = JSON.parse(localStorage.getItem(RKEY) || 'null');
+        return v && Array.isArray(v.done) ? v.done : [];
+      }catch(e){ return []; }
+    }
+    function recallSave(done){
+      try{ localStorage.setItem(RKEY, JSON.stringify({v:1, done:done})); return true; }
+      catch(e){ toast('浏览器禁止了本地存储，勾选无法保存'); return false; }
+    }
+    function recallCollect(){
+      return recallItems.filter(function(li){ return li.classList.contains('is-done'); })
+        .map(function(li){ return li.dataset.head; });
+    }
+    function recallApply(){
+      var done = {};
+      recallLoad().forEach(function(h){ done[h] = true; });
+      var n = 0;
+      recallItems.forEach(function(li){
+        var on = !!done[li.dataset.head];
+        li.classList.toggle('is-done', on);
+        var box = li.querySelector('input');
+        if(box) box.checked = on;
+        if(on) n++;
+      });
+      if(recallCount) recallCount.textContent = '已记住 ' + n + ' / ' + recallItems.length;
+    }
+    recall.addEventListener('change', function(e){
+      var box = e.target;
+      if(!box.matches || !box.matches('input[type="checkbox"]')) return;
+      var li = box.closest('.recall-item');
+      if(!li) return;
+      li.classList.toggle('is-done', box.checked);
+      if(!recallSave(recallCollect())){
+        box.checked = !box.checked;
+        li.classList.toggle('is-done', box.checked);
+        return;
+      }
+      recallApply();
+    });
+    recall.addEventListener('click', function(e){
+      var jump = e.target.closest('.recall-num');
+      if(jump){
+        e.preventDefault();
+        var id = jump.dataset.n;
+        var mark = document.querySelector('mark.hl[data-n="' + id + '"]');
+        if(narrow.matches) openOnly('n:' + id, true);
+        else if(mark){
+          mark.scrollIntoView({block:'center', behavior:'smooth'});
+          setActive('n:' + id, true);
+          setTimeout(function(){ setActive('n:' + id, false); }, 1400);
+        }
+        return;
+      }
+      var q = e.target.closest('.recall-q');
+      if(!q) return;
+      var li = q.closest('.recall-item');
+      if(!li) return;
+      var open = li.classList.toggle('is-open');
+      q.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    var recallReset = document.getElementById('recall-reset');
+    if(recallReset) recallReset.addEventListener('click', function(){
+      var prev = recallCollect();
+      if(!prev.length) return;
+      if(!recallSave([])) return;
+      recallApply();
+      toast('已清空勾选', '撤销', function(){ if(recallSave(prev)) recallApply(); });
+    });
+    window.addEventListener('storage', function(e){ if(e.key === RKEY) recallApply(); });
+    recallApply();
+  }
 })();

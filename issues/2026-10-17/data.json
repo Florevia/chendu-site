@@ -1,0 +1,426 @@
+{
+  "date": "2026-10-17",
+  "topic": "stocks",
+  "topic_label": "美股",
+  "issue_title_zh": "科技股抛售延续：标普周跌约 2%，纳指录得 6 月以来最差一周",
+  "lead_zh": "今天读美联社（AP）周五收盘综述。芯片股领跌（美光、AMD、博通、英特尔跌 4.5%–6%），标普周跌约 2%、抹去上周创纪录的涨幅，纳指录得 6 月以来最差一周；十年期美债收益率 5.09%，12 月加息概率升至 74.3%。重点看：cap off / wipe out / hold up / all but / in the red / investment spree 这类财经套话。",
+  "article": {
+    "title": "US markets are weighed down by an extended sell-off in the tech sector",
+    "author": "Alex Veiga",
+    "source": "The Associated Press",
+    "published": "2026-10-16 16:38 EDT（北京时间 10 月 17 日 04:38；WRAL 页更新时间）",
+    "url": "https://www.wral.com/news/ap/d2655-stocks-rebound-after-tech-sell-off-and-indonesia-shares-sink-on-market-downgrade-warning/",
+    "url_label": "AP 原文（WRAL 转载）",
+    "alt_urls": [
+      {
+        "label": "AP News 原文",
+        "url": "https://apnews.com/article/stocks-markets-us-ai-oil-tech-warsh-d2655f64db7ec8ae450525d58f97b628"
+      },
+      {
+        "label": "The Canadian Press 转载",
+        "url": "https://www.thecanadianpressnews.ca/business/us-markets-are-weighed-down-by-an-extended-sell-off-in-the-tech-sector/article_402edef0-de91-538d-9d48-9a1752ef9a88.html"
+      }
+    ],
+    "excerpt_note": "节选自原文开篇与芯片股段落、美债收益率与美联储段落，以及收盘点位（约 430 词）。版权归 The Associated Press 所有，仅供个人学习，完整报道请看原文。",
+    "sections": [
+      [
+        "A broad sell-off in technology companies pulled stocks lower on Wall Street Friday, capping off the market’s worst week since late June.",
+        "The S&P 500 fell 1.1%. Its roughly 2% drop for the week wiped out its gains from last week, when it set an all-time high.",
+        "The Nasdaq composite, which is heavily weighted with technology stocks, sank 2.1% and posted its first weekly loss in five weeks and its worst since June.",
+        "The Dow Jones Industrial Average held up better, closing 0.3% lower.",
+        "Slightly more than half of the stocks in the S&P 500 fell, but all but seven of the 75 stocks in the index’s tech sector closed lower. Among the biggest decliners were chip companies, reflecting mounting worries about how long the frenzy over the AI buildout will last.",
+        "Micron Technology fell 5.6%, Advanced Micro Devices dropped 6%, Broadcom lost 4.5% and Intel gave up 5.8%.",
+        "Among the other tech companies that finished in the red were Meta, which fell 3.7%, and Google parent Alphabet, which dropped 2.5%.",
+        "It’s been a choppy week for chipmakers and other big tech stocks central to the artificial intelligence industry. Investors are now worried that the companies, which have relied on debt markets to finance an investment spree into their technology, may not be able to keep borrowing and spending as heavily with yields in bond markets worldwide recently climbing to their highest levels in years."
+      ],
+      [
+        "In the bond market, Treasury yields held relatively steady. The yield on the 10-year Treasury slipped to 5.09% from 5.10% late Thursday. It had topped 5.30% earlier this month and touched its highest level since 2002 because of worries about high inflation, signals of a strong U.S. economy and other factors.",
+        "Yields are down despite reports this week showing that inflation at the consumer and wholesale level rose more in the U.S. than economists expected.",
+        "The reports could persuade the inflation-fighters at the Federal Reserve to hike their key interest rate before the end of this year. The central bank increased its key interest rate by a quarter-point to about 3.9% in September, its first increase in three years.",
+        "Wall Street traders expect the Fed will keep its short-term rate unchanged at its policy meeting this month, but the odds of a rate increase at the December meeting have jumped to 74.3% from 50.2% a month ago, according to data from the CME Group."
+      ],
+      [
+        "All told, the S&P 500 fell 84.62 points to 7,659.44. The Dow dropped 175.28 points to 52,002.41, and the Nasdaq declined 572.99 points to close at 26,140.03."
+      ]
+    ]
+  },
+  "notes": [
+    {
+      "p": [
+        0,
+        0
+      ],
+      "anchor": "A broad sell-off",
+      "type": "vocab",
+      "head": "sell-off",
+      "zh": "/ˈselɔːf/ n. 抛售潮、集中卖出。a broad sell-off = 普遍抛售。例：A sell-off in chip stocks dragged the Nasdaq lower."
+    },
+    {
+      "p": [
+        0,
+        0
+      ],
+      "anchor": "pulled stocks lower",
+      "type": "idiom",
+      "head": "pull … lower",
+      "zh": "拖累……下跌。pulled stocks lower = 把股市拉低。反义 push / lift stocks higher。同义 drag down / weigh on。"
+    },
+    {
+      "p": [
+        0,
+        0
+      ],
+      "anchor": "capping off",
+      "type": "idiom",
+      "head": "cap off",
+      "zh": "为……收尾、画上句号（多指一段时期的结尾）。capping off the market’s worst week = 为最差一周收官。也可 cap a week / round off。"
+    },
+    {
+      "p": [
+        0,
+        1
+      ],
+      "anchor": "wiped out its gains",
+      "type": "idiom",
+      "head": "wipe out gains",
+      "zh": "抹去涨幅、把涨的全跌回去。wiped out its gains from last week = 把上周涨幅全部吐回。同义 erase / give back gains。"
+    },
+    {
+      "p": [
+        0,
+        1
+      ],
+      "anchor": "when it set an all-time high",
+      "type": "grammar",
+      "head": "非限制性 when 从句",
+      "zh": "when 引导从句修饰前面的 last week：「上周——那时它创下历史新高」。逗号后的 when = and at that time，补充说明时间背景。"
+    },
+    {
+      "p": [
+        0,
+        2
+      ],
+      "anchor": "heavily weighted with",
+      "type": "idiom",
+      "head": "be weighted with / toward",
+      "zh": "（指数）权重偏重于……。heavily weighted with technology stocks = 科技股占比很大。也说 tech-heavy。"
+    },
+    {
+      "p": [
+        0,
+        2
+      ],
+      "anchor": "first weekly loss in five weeks",
+      "type": "grammar",
+      "head": "the first … in + 时间段",
+      "zh": "……以来首次。first weekly loss in five weeks = 五周来首次周跌。in 表「在这段时间内」，类似 the first rate hike in three years。"
+    },
+    {
+      "p": [
+        0,
+        3
+      ],
+      "anchor": "held up better",
+      "type": "idiom",
+      "head": "hold up",
+      "zh": "顶住、抗跌。held up better = 表现相对坚挺。原文后面 Energy stocks held up better than most 同理。"
+    },
+    {
+      "p": [
+        0,
+        4
+      ],
+      "anchor": "all but seven of the 75 stocks",
+      "type": "grammar",
+      "head": "all but + 数量",
+      "zh": "除了……之外全部。all but seven of the 75 stocks … closed lower = 75 只里只有 7 只没跌。注意 all but 也可作「几乎」：all but certain = 几乎肯定。"
+    },
+    {
+      "p": [
+        0,
+        4
+      ],
+      "anchor": "biggest decliners",
+      "type": "vocab",
+      "head": "decliner",
+      "zh": "/dɪˈklaɪnər/ n. 下跌股。biggest decliners = 跌幅最大的股票。对应 gainers / advancers（上涨股）。例：Chipmakers were among the biggest decliners."
+    },
+    {
+      "p": [
+        0,
+        4
+      ],
+      "anchor": "reflecting mounting worries about",
+      "type": "grammar",
+      "head": "现在分词短语作补充说明",
+      "zh": "reflecting … 是现在分词短语，补充说明前句「芯片股领跌」意味着什么：反映出对……的担忧加剧。后接 how long … will last 是 about 的宾语从句，用陈述语序。"
+    },
+    {
+      "p": [
+        0,
+        4
+      ],
+      "anchor": "AI buildout",
+      "type": "vocab",
+      "head": "buildout",
+      "zh": "/ˈbɪldaʊt/ n. （大规模）建设、扩建。the AI buildout = AI 基础设施（数据中心、算力）大建设。例：The AI buildout requires huge amounts of power."
+    },
+    {
+      "p": [
+        0,
+        5
+      ],
+      "anchor": "gave up 5.8%",
+      "type": "idiom",
+      "head": "give up + 百分比",
+      "zh": "（股价）回落、跌去。Intel gave up 5.8% = 英特尔跌 5.8%。同段换着说：fell / dropped / lost / gave up，收盘稿避免重复的典型写法。"
+    },
+    {
+      "p": [
+        0,
+        6
+      ],
+      "anchor": "finished in the red",
+      "type": "idiom",
+      "head": "in the red",
+      "zh": "收跌、处于亏损（红字记账）。finished in the red = 收盘下跌。反义 in the green / in positive territory。注意美股红跌绿涨，和 A 股相反。"
+    },
+    {
+      "p": [
+        0,
+        7
+      ],
+      "anchor": "choppy week",
+      "type": "vocab",
+      "head": "choppy",
+      "zh": "/ˈtʃɑːpi/ adj. （行情）起伏不定的、震荡的。本义「波浪起伏的海面」。例：Stocks had a choppy session, swinging between gains and losses."
+    },
+    {
+      "p": [
+        0,
+        7
+      ],
+      "anchor": "central to the artificial intelligence industry",
+      "type": "grammar",
+      "head": "形容词短语后置作定语",
+      "zh": "central to … 修饰前面的 big tech stocks，相当于 that are central to …：「对 AI 产业至关重要的大型科技股」。形容词带补语时要放名词后面。"
+    },
+    {
+      "p": [
+        0,
+        7
+      ],
+      "anchor": "which have relied on debt markets to finance",
+      "type": "grammar",
+      "head": "长句拆解",
+      "zh": "主干：Investors are now worried that the companies … may not be able to keep borrowing and spending。which 从句插在主谓之间，说明这些公司靠债市融资；to finance … 是目的状语。"
+    },
+    {
+      "p": [
+        0,
+        7
+      ],
+      "anchor": "investment spree",
+      "type": "vocab",
+      "head": "spree",
+      "zh": "/spriː/ n. 一阵狂热的（消费/投资）活动。investment spree = 投资狂潮；shopping / spending spree = 疯狂购物/花钱。例：The company went on a hiring spree."
+    },
+    {
+      "p": [
+        0,
+        7
+      ],
+      "anchor": "with yields in bond markets worldwide recently climbing",
+      "type": "grammar",
+      "head": "with 复合结构表原因",
+      "zh": "with + 名词 + 现在分词：「因为全球债市收益率最近攀升」。逻辑主语 yields 与 climbing 是主动关系，整个结构说明「为何借不动」。"
+    },
+    {
+      "p": [
+        1,
+        0
+      ],
+      "anchor": "held relatively steady",
+      "type": "idiom",
+      "head": "hold steady",
+      "zh": "保持平稳、基本不动。Treasury yields held relatively steady = 美债收益率相对平稳。同义 be little changed / hover。"
+    },
+    {
+      "p": [
+        1,
+        0
+      ],
+      "anchor": "slipped to 5.09% from 5.10%",
+      "type": "grammar",
+      "head": "slip to X from Y",
+      "zh": "从 Y 小幅降至 X。注意新数在前、旧数在后：to 新值 from 旧值。slip 比 fall 幅度更小。"
+    },
+    {
+      "p": [
+        1,
+        0
+      ],
+      "anchor": "It had topped 5.30%",
+      "type": "grammar",
+      "head": "过去完成时 had done",
+      "zh": "had topped 表示在「周四/本周」之前更早发生：本月早些时候曾突破 5.30%。top 作动词 = 超过、突破。"
+    },
+    {
+      "p": [
+        1,
+        1
+      ],
+      "anchor": "despite reports this week showing",
+      "type": "grammar",
+      "head": "despite + 名词 + 分词",
+      "zh": "despite 是介词，后接名词 reports，showing … 修饰 reports（= reports that show …）。不能写 despite of。同义 in spite of / even though + 从句。"
+    },
+    {
+      "p": [
+        1,
+        1
+      ],
+      "anchor": "consumer and wholesale level",
+      "type": "vocab",
+      "head": "wholesale",
+      "zh": "/ˈhoʊlseɪl/ adj./n. 批发（的）。the consumer and wholesale level = 消费端（CPI）和批发端（PPI，生产者物价）。例：Wholesale prices rose 0.5% last month."
+    },
+    {
+      "p": [
+        1,
+        2
+      ],
+      "anchor": "inflation-fighters",
+      "type": "vocab",
+      "head": "inflation-fighter",
+      "zh": "/ɪnˈfleɪʃən ˌfaɪtər/ n. 抗通胀者。AP 常用来指美联储官员。例：The Fed’s inflation-fighters may raise rates again."
+    },
+    {
+      "p": [
+        1,
+        2
+      ],
+      "anchor": "hike their key interest rate",
+      "type": "vocab",
+      "head": "hike",
+      "zh": "/haɪk/ v./n. 上调（利率、价格）。hike the rate = 加息；a rate hike = 一次加息。反义 cut。例：The Fed may hike rates in December."
+    },
+    {
+      "p": [
+        1,
+        2
+      ],
+      "anchor": "by a quarter-point",
+      "type": "vocab",
+      "head": "quarter-point",
+      "zh": "/ˈkwɔːrtər pɔɪnt/ n. 0.25 个百分点（25 个基点）。increased … by a quarter-point = 加息 25 个基点。by 表变化幅度。"
+    },
+    {
+      "p": [
+        1,
+        3
+      ],
+      "anchor": "keep its short-term rate unchanged",
+      "type": "idiom",
+      "head": "keep … unchanged",
+      "zh": "维持……不变（按兵不动）。keep rates unchanged = 利率不变。同义 hold rates steady / leave rates on hold。"
+    },
+    {
+      "p": [
+        1,
+        3
+      ],
+      "anchor": "the odds of a rate increase",
+      "type": "idiom",
+      "head": "the odds of …",
+      "zh": "……的概率/可能性。the odds of a rate increase = 加息概率。odds 恒用复数；odds are that … = 很可能……。"
+    },
+    {
+      "p": [
+        1,
+        3
+      ],
+      "anchor": "CME Group",
+      "type": "vocab",
+      "head": "CME Group",
+      "zh": "芝加哥商品交易所集团。其 FedWatch 工具根据联邦基金期货价格推算市场对美联储加息/降息的概率预期。"
+    },
+    {
+      "p": [
+        2,
+        0
+      ],
+      "anchor": "All told,",
+      "type": "idiom",
+      "head": "all told",
+      "zh": "总计、合计下来。收盘稿固定收尾：All told, the S&P 500 fell … points to …。10/15 期出现过，巩固一下。"
+    }
+  ],
+  "review_words": [
+    {
+      "word": "sell-off",
+      "ipa": "/ˈselɔːf/",
+      "zh": "n. 抛售潮",
+      "example": "A broad sell-off in technology companies pulled stocks lower on Wall Street Friday."
+    },
+    {
+      "word": "choppy",
+      "ipa": "/ˈtʃɑːpi/",
+      "zh": "adj. （行情）震荡的，起伏不定的",
+      "example": "It’s been a choppy week for chipmakers and other big tech stocks."
+    },
+    {
+      "word": "spree",
+      "ipa": "/spriː/",
+      "zh": "n. 一阵狂热的（花钱/投资）活动",
+      "example": "The companies relied on debt markets to finance an investment spree."
+    },
+    {
+      "word": "wholesale",
+      "ipa": "/ˈhoʊlseɪl/",
+      "zh": "adj./n. 批发（的）",
+      "example": "Inflation at the consumer and wholesale level rose more than expected."
+    },
+    {
+      "word": "hike",
+      "ipa": "/haɪk/",
+      "zh": "v./n. 上调（利率）；加息",
+      "example": "The reports could persuade the Fed to hike its key interest rate."
+    }
+  ],
+  "patterns": [
+    {
+      "pattern": "A pulled B lower …, capping off C",
+      "zh": "A 拖累 B 下跌，为 C 画上句号",
+      "from": "A broad sell-off in technology companies pulled stocks lower on Wall Street Friday, capping off the market’s worst week since late June.",
+      "model": "A slump in bank shares pulled European stocks lower on Thursday, capping off their worst month since March.",
+      "model_zh": "银行股下挫拖累欧股周四走低，为其 3 月以来最差的一个月收尾。"
+    },
+    {
+      "pattern": "all but X of the Y … closed lower",
+      "zh": "Y 个……里除了 X 个以外全部收跌",
+      "from": "Slightly more than half of the stocks in the S&P 500 fell, but all but seven of the 75 stocks in the index’s tech sector closed lower.",
+      "model": "All but two of the 11 sectors in the S&P 500 closed higher after the jobs report.",
+      "model_zh": "就业报告公布后，标普 500 的 11 个板块中除两个外全部收涨。"
+    },
+    {
+      "pattern": "the odds of A have jumped to X from Y …, according to B",
+      "zh": "据 B，A 的概率已从 Y 升至 X",
+      "from": "…the odds of a rate increase at the December meeting have jumped to 74.3% from 50.2% a month ago, according to data from the CME Group.",
+      "model": "The odds of a recession next year have jumped to 40% from 25% in July, according to a survey of economists.",
+      "model_zh": "据一项经济学家调查，明年陷入衰退的概率已从 7 月的 25% 升至 40%。"
+    }
+  ],
+  "podcast": {
+    "show": "Marketplace Tech (APM)",
+    "title": "AI borrowing slowdown raises questions about investor exposure",
+    "date": "2026-10-16",
+    "url": "https://www.marketplace.org/episode/2026/10/16/ai-borrowing-slowdown-raises-questions-about-investor-exposure",
+    "zh": "Marketplace Tech 周五「Tech Bytes」周回顾：AI 相关发债放缓、CoreWeave 债券跌至「财务困境」水平，外加 Netflix 裁员约 6%。和今天 AP 文里「靠举债扩张的 AI 公司还能不能继续借钱花钱」是同一条主线，适合泛听抓 debt issuance / borrowing costs / financial distress。"
+  },
+  "audio": {
+    "normal": "audio.mp3",
+    "slow": "audio-slow.mp3",
+    "voice": "en-US-AriaNeural"
+  }
+}

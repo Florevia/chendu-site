@@ -1,0 +1,456 @@
+{
+  "date": "2026-10-16",
+  "topic": "ai",
+  "topic_label": "AI",
+  "issue_title_zh": "Anthropic 路演：Q3 营收飙至 168 亿，调整后已盈利，IPO 估值瞄 2 万亿",
+  "lead_zh": "今天读路透社（RTE 转载）对 Anthropic 旧金山投资者日的报道。Q3 营收环比增 45% 至 168 亿美元，并称调整后已盈利；Amodei 谈安全却避谈「人类灭绝」，帽子上写着 thinking。重点看：assuage / on an adjusted basis / breakneck / outrun / twelvefold 这类财经与科技套话。",
+  "article": {
+    "title": "Anthropic pre-IPO meeting hears of surging revenue, no human extinction",
+    "author": "Milana Vinn",
+    "source": "Reuters",
+    "published": "2026-10-15 09:49 IST（北京时间 10 月 15 日 16:49；RTE 页更新时间）",
+    "url": "https://www.rte.ie/news/business/2026/1015/1595440-anthropic-pre-ipo-meeting-hears-of-surging-revenue/",
+    "url_label": "Reuters 原文（RTE 转载）",
+    "alt_urls": [
+      {
+        "label": "Bloomberg 相关报道",
+        "url": "https://www.bloomberg.com/news/articles/2026-10-14/anthropic-revenue-jumps-to-16-8-billion-in-quarter-before-ipo"
+      },
+      {
+        "label": "Investing.com 路透稿",
+        "url": "https://www.investing.com/news/stock-market-news/anthropics-q3-revenue-surges-45-to-nearly-17-billion-4950208"
+      }
+    ],
+    "excerpt_note": "节选自原文开篇营收与投资者日段落，以及融资规模与亏损背景（约 410 词）。版权归 Reuters 所有，仅供个人学习，完整报道请看原文。",
+    "sections": [
+      [
+        "Anthropic has told prospective investors that revenue in the third quarter surged 45% from the prior quarter, two people who attended an investor day said, a move that could assuage market concerns about the huge costs of developing AI systems.",
+        "Third-quarter revenue rose to $16.8 billion from $11.6 billion in the second quarter and $4.7 billion in the first quarter, the people said.",
+        "Anthropic told the group the company was profitable on an adjusted basis in the third quarter, they added.",
+        "The meeting in San Francisco was meant to familiarise prospective Anthropic investors with the company before its highly anticipated IPO.",
+        "The IPO is expected to precede a public listing by rival OpenAI, making Anthropic an early test of investor appetite for loss-making AI developers investing heavily to pursue massive scale. Its public-market debut is likely to be pushed until after the November US midterm elections, Reuters has reported.",
+        "Attendees at yesterday's event met with Anthropic CEO Dario Amodei and Chief Financial Officer Krishna Rao and came away optimistic about the company's rapid revenue growth and path to profitability, a few of them told Reuters as they left its headquarters in the evening.",
+        "Amodei reiterated the company’s focus on AI safety but avoided mentioning threats of human extinction, one person in the group said.",
+        "In its prospectus seen by Reuters last month, Anthropic warned that advanced AI could pose \"catastrophic or existential risks to humanity.\"",
+        "Anthropic executives yesterday, however, talked about how the company was using its AI to help its own business including designing a custom chip. The company handed out hats to the attendees, some of which read \"thinking.\"",
+        "Anthropic could see its annual revenue run rate reach $110 billion by the end of the year, according to estimates from analysts who met with company executives earlier this week."
+      ],
+      [
+        "Scrutiny of AI companies' finances has intensified as they pour money into chips, data centres and computing power needed to develop and operate increasingly powerful models.",
+        "Targeting a valuation of over $2 trillion, Anthropic is seeking to convince investors that its breakneck revenue growth can eventually outrun the enormous costs of building and running AI systems.",
+        "Last year, Anthropic's revenue increased twelvefold to nearly $4.6 billion, even as the company lost more than $8 billion on an operating basis, excluding writedowns of various liabilities mostly tied to previous fundraising, Reuters reported exclusively last month.",
+        "The company has committed at least $518 billion over a decade for cloud services, computing and infrastructure."
+      ]
+    ]
+  },
+  "notes": [
+    {
+      "p": [
+        0,
+        0
+      ],
+      "anchor": "surged 45%",
+      "type": "vocab",
+      "head": "surge",
+      "zh": "激增、飙升。surged 45% = 猛增 45%。比 rose / increased 更猛。名词 a surge in revenue。"
+    },
+    {
+      "p": [
+        0,
+        0
+      ],
+      "anchor": "assuage market concerns",
+      "type": "vocab",
+      "head": "assuage",
+      "zh": "缓和、减轻（担忧/痛苦）。assuage concerns = 安抚市场担忧。偏书面。"
+    },
+    {
+      "p": [
+        0,
+        0
+      ],
+      "anchor": "huge costs of developing",
+      "type": "grammar",
+      "head": "the cost(s) of doing",
+      "zh": "做某事的成本。the huge costs of developing AI systems = 开发 AI 系统的巨额成本。"
+    },
+    {
+      "p": [
+        0,
+        1
+      ],
+      "anchor": "$16.8 billion",
+      "type": "vocab",
+      "head": "billion",
+      "zh": "十亿（美式）。$16.8 billion = 168 亿美元。读作 sixteen point eight billion。"
+    },
+    {
+      "p": [
+        0,
+        2
+      ],
+      "anchor": "profitable on an adjusted basis",
+      "type": "idiom",
+      "head": "on an adjusted basis",
+      "zh": "按调整后口径。剔除一次性开支等后算「盈利」。财报常用 adjusted / non-GAAP。"
+    },
+    {
+      "p": [
+        0,
+        3
+      ],
+      "anchor": "familiarise prospective",
+      "type": "vocab",
+      "head": "familiarise (with)",
+      "zh": "使熟悉。英式拼写 familiarise（美式 familiarize）。familiarise investors with the company = 让投资者了解公司。"
+    },
+    {
+      "p": [
+        0,
+        3
+      ],
+      "anchor": "highly anticipated IPO",
+      "type": "vocab",
+      "head": "IPO",
+      "zh": "首次公开募股（Initial Public Offering）。highly anticipated = 备受期待的。"
+    },
+    {
+      "p": [
+        0,
+        4
+      ],
+      "anchor": "precede a public listing",
+      "type": "vocab",
+      "head": "precede",
+      "zh": "先于、在……之前发生。precede a listing by OpenAI = 抢在 OpenAI 上市之前。"
+    },
+    {
+      "p": [
+        0,
+        4
+      ],
+      "anchor": "investor appetite for",
+      "type": "idiom",
+      "head": "appetite for",
+      "zh": "对……的胃口/兴趣。investor appetite for … = 投资者对……的购买意愿。"
+    },
+    {
+      "p": [
+        0,
+        4
+      ],
+      "anchor": "pursue massive scale",
+      "type": "vocab",
+      "head": "pursue",
+      "zh": "追求、追逐。pursue massive scale = 追求超大规模。AI 公司常说 scale。"
+    },
+    {
+      "p": [
+        0,
+        4
+      ],
+      "anchor": "public-market debut",
+      "type": "idiom",
+      "head": "debut",
+      "zh": "首次亮相。public-market debut = 公开市场首秀（即上市）。"
+    },
+    {
+      "p": [
+        0,
+        5
+      ],
+      "anchor": "came away optimistic",
+      "type": "idiom",
+      "head": "come away + adj.",
+      "zh": "离开时带着某种感受。came away optimistic = 散场时感到乐观。"
+    },
+    {
+      "p": [
+        0,
+        5
+      ],
+      "anchor": "path to profitability",
+      "type": "idiom",
+      "head": "path to profitability",
+      "zh": "通向盈利之路。创业/AI 融资常用：path to profitability / path to positive cash flow。"
+    },
+    {
+      "p": [
+        0,
+        6
+      ],
+      "anchor": "company’s focus",
+      "type": "grammar",
+      "head": "弯引号 ’",
+      "zh": "注意 company’s 用的是弯引号（’），不是直引号 (')。锚定原文时要一字不差。"
+    },
+    {
+      "p": [
+        0,
+        6
+      ],
+      "anchor": "human extinction",
+      "type": "vocab",
+      "head": "extinction",
+      "zh": "灭绝。human extinction = 人类灭绝。AI 安全讨论里的极端风险说法。"
+    },
+    {
+      "p": [
+        0,
+        7
+      ],
+      "anchor": "catastrophic or existential risks",
+      "type": "vocab",
+      "head": "existential risk",
+      "zh": "存在性风险（可能威胁人类存续）。prospectus 招股书里的警示语。"
+    },
+    {
+      "p": [
+        0,
+        8
+      ],
+      "anchor": "designing a custom chip",
+      "type": "vocab",
+      "head": "custom chip",
+      "zh": "定制芯片。用自家 AI 帮自己设计芯片，显示「AI 赋能业务」叙事。"
+    },
+    {
+      "p": [
+        0,
+        9
+      ],
+      "anchor": "revenue run rate",
+      "type": "idiom",
+      "head": "run rate",
+      "zh": "年化运行速率。annual revenue run rate = 按当前季度年化后的营收规模（未必等于全年实际）。"
+    },
+    {
+      "p": [
+        1,
+        0
+      ],
+      "anchor": "Scrutiny of",
+      "type": "vocab",
+      "head": "scrutiny",
+      "zh": "严格审视、审查。Scrutiny of … has intensified = 对……的审视加剧。"
+    },
+    {
+      "p": [
+        1,
+        0
+      ],
+      "anchor": "data centres",
+      "type": "vocab",
+      "head": "data centre",
+      "zh": "数据中心。英式 centres（美式 centers）。chips, data centres and computing power = 芯片、数据中心与算力。"
+    },
+    {
+      "p": [
+        1,
+        1
+      ],
+      "anchor": "Targeting a valuation of",
+      "type": "grammar",
+      "head": "现在分词作状语",
+      "zh": "句首 Targeting… = 以……估值为目标。新闻里常用分词短语领起背景。"
+    },
+    {
+      "p": [
+        1,
+        1
+      ],
+      "anchor": "breakneck revenue growth",
+      "type": "vocab",
+      "head": "breakneck",
+      "zh": "快得危险的、极快的。breakneck growth / speed = 飞奔式增长。"
+    },
+    {
+      "p": [
+        1,
+        1
+      ],
+      "anchor": "outrun the enormous costs",
+      "type": "idiom",
+      "head": "outrun",
+      "zh": "跑得比……快、超过。outrun the costs = 增长跑赢成本。"
+    },
+    {
+      "p": [
+        1,
+        2
+      ],
+      "anchor": "increased twelvefold",
+      "type": "vocab",
+      "head": "twelvefold",
+      "zh": "增至十二倍（增长十一倍）。-fold 表倍数：twofold / tenfold / twelvefold。"
+    },
+    {
+      "p": [
+        1,
+        2
+      ],
+      "anchor": "on an operating basis",
+      "type": "idiom",
+      "head": "on an … basis",
+      "zh": "按……口径。on an operating basis = 按经营口径（未计某些非经常项前）。对照上文 adjusted basis。"
+    },
+    {
+      "p": [
+        1,
+        2
+      ],
+      "anchor": "writedowns of various liabilities",
+      "type": "vocab",
+      "head": "writedown",
+      "zh": "减值/减记。writedown of liabilities = 对负债的减记。会计术语。"
+    },
+    {
+      "p": [
+        1,
+        3
+      ],
+      "anchor": "committed at least $518 billion",
+      "type": "vocab",
+      "head": "commit",
+      "zh": "承诺投入。has committed $518 billion = 已承诺至少 5180 亿美元（云与算力合同）。"
+    },
+    {
+      "p": [
+        1,
+        3
+      ],
+      "anchor": "over a decade",
+      "type": "idiom",
+      "head": "over a decade",
+      "zh": "在十年期间。over a decade = 跨越约十年。"
+    }
+  ],
+  "review_words": [
+    {
+      "word": "surge",
+      "ipa": "/sɜːrdʒ/",
+      "zh": "v./n. 激增，飙升",
+      "example": "Revenue in the third quarter surged 45% from the prior quarter."
+    },
+    {
+      "word": "assuage",
+      "ipa": "/əˈsweɪdʒ/",
+      "zh": "v. 缓和，减轻",
+      "example": "The numbers could assuage market concerns about AI costs."
+    },
+    {
+      "word": "adjusted basis",
+      "ipa": "/əˈdʒʌstɪd ˈbeɪsɪs/",
+      "zh": "n. 调整后口径",
+      "example": "The company was profitable on an adjusted basis."
+    },
+    {
+      "word": "familiarise",
+      "ipa": "/fəˈmɪliəraɪz/",
+      "zh": "v. 使熟悉（英式）",
+      "example": "The meeting was meant to familiarise investors with the company."
+    },
+    {
+      "word": "appetite",
+      "ipa": "/ˈæpɪtaɪt/",
+      "zh": "n. 胃口；投资意愿",
+      "example": "It is an early test of investor appetite for AI developers."
+    },
+    {
+      "word": "debut",
+      "ipa": "/deɪˈbjuː/",
+      "zh": "n. 首次亮相",
+      "example": "Its public-market debut may wait until after the midterms."
+    },
+    {
+      "word": "extinction",
+      "ipa": "/ɪkˈstɪŋkʃn/",
+      "zh": "n. 灭绝",
+      "example": "Amodei avoided mentioning threats of human extinction."
+    },
+    {
+      "word": "existential",
+      "ipa": "/ˌeɡzɪˈstenʃl/",
+      "zh": "adj. 存在性的",
+      "example": "The prospectus warned of existential risks to humanity."
+    },
+    {
+      "word": "run rate",
+      "ipa": "/rʌn reɪt/",
+      "zh": "n. 年化运行速率",
+      "example": "Analysts see a $110 billion annual revenue run rate."
+    },
+    {
+      "word": "scrutiny",
+      "ipa": "/ˈskruːtəni/",
+      "zh": "n. 严格审视",
+      "example": "Scrutiny of AI companies' finances has intensified."
+    },
+    {
+      "word": "breakneck",
+      "ipa": "/ˈbreɪknek/",
+      "zh": "adj. 极快的，快得危险的",
+      "example": "Breakneck revenue growth must outrun enormous costs."
+    },
+    {
+      "word": "outrun",
+      "ipa": "/ˌaʊtˈrʌn/",
+      "zh": "v. 跑赢，超过",
+      "example": "Growth must eventually outrun the costs of building AI."
+    },
+    {
+      "word": "twelvefold",
+      "ipa": "/ˈtwelvəfoʊld/",
+      "zh": "adv./adj. 十二倍的",
+      "example": "Revenue increased twelvefold to nearly $4.6 billion."
+    },
+    {
+      "word": "writedown",
+      "ipa": "/ˈraɪtdaʊn/",
+      "zh": "n. 减值，减记",
+      "example": "Losses excluded writedowns of various liabilities."
+    }
+  ],
+  "patterns": [
+    {
+      "pattern": "A told B that C surged X% from D, a move that could assuage E",
+      "zh": "A 告诉 B：C 较 D 激增 X%，此举可能缓和 E",
+      "from": "Anthropic has told prospective investors that revenue in the third quarter surged 45% from the prior quarter… a move that could assuage market concerns…",
+      "model": "The CFO told analysts that bookings surged 30% from last quarter, a move that could assuage growth concerns.",
+      "model_zh": "CFO 告诉分析师：订单较上季激增 30%，此举可能缓和增长担忧。"
+    },
+    {
+      "pattern": "A is expected to precede B, making C an early test of D",
+      "zh": "A 预计先于 B，使 C 成为对 D 的早期考验",
+      "from": "The IPO is expected to precede a public listing by rival OpenAI, making Anthropic an early test of investor appetite…",
+      "model": "The chip launch is expected to precede rival releases, making it an early test of demand.",
+      "model_zh": "这款芯片发布预计先于对手，成为需求的早期考验。"
+    },
+    {
+      "pattern": "A is seeking to convince B that C can eventually outrun D",
+      "zh": "A 试图说服 B：C 最终能跑赢 D",
+      "from": "Anthropic is seeking to convince investors that its breakneck revenue growth can eventually outrun the enormous costs…",
+      "model": "Startups are seeking to convince VCs that efficiency gains can eventually outrun cloud bills.",
+      "model_zh": "创业公司试图说服风投：效率提升最终能跑赢云账单。"
+    },
+    {
+      "pattern": "A increased N-fold to X, even as B lost Y on a Z basis",
+      "zh": "A 增至 N 倍达到 X，即便 B 按 Z 口径亏损 Y",
+      "from": "Anthropic's revenue increased twelvefold to nearly $4.6 billion, even as the company lost more than $8 billion on an operating basis…",
+      "model": "Sales increased fivefold to $2 billion, even as the firm lost $500 million on an operating basis.",
+      "model_zh": "销售额增至五倍达到 20 亿美元，即便公司按经营口径亏损 5 亿美元。"
+    }
+  ],
+  "podcast": {
+    "show": "The Wall Street Skinny",
+    "title": "Is Anthropic's $2 Trillion IPO in Jeopardy? What We Learned from Leaked IPO Prospectus",
+    "date": "2026-10-01",
+    "url": "https://podcasts.apple.com/us/podcast/is-anthropics-%242-trillion-ipo-in-jeopardy-what-we-learned/id1680425507?i=1000792645493",
+    "zh": "拆解 Anthropic 泄露招股书里的营收、亏损、5180 亿算力承诺与安全叙事，和今天投资者日上的 Q3 数字、2 万亿估值同一条主线，适合泛听抓 IPO / run rate / existential risk。"
+  },
+  "audio": {
+    "normal": "audio.mp3",
+    "slow": "audio-slow.mp3",
+    "voice": "en-US-AriaNeural"
+  }
+}

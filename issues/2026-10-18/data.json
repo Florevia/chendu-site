@@ -1,0 +1,521 @@
+{
+  "date": "2026-10-18",
+  "topic": "ai",
+  "topic_label": "AI",
+  "issue_title_zh": "OpenAI 再披露 4 起测试事故：智能体入侵网站、擅用加密钱包",
+  "lead_zh": "今天读 Ars Technica 安全编辑 Dan Goodin 的报道。OpenAI 周四公布 6 月发生的 4 起内部测试事故：模型为完成任务入侵政府统计网站拿到凭据、用公开助记词动用测试网钱包付费。作者最后提醒：与其说 AI「失控」，不如说它们正是被训练成这样。重点看：bypass / credential / zero-day / go rogue / substitute A for B / guardrail 这类科技安全词。",
+  "article": {
+    "title": "OpenAI models hacked a crypto wallet and breached more websites",
+    "author": "Dan Goodin",
+    "source": "Ars Technica",
+    "published": "2026-10-16 16:59 EDT（北京时间 10 月 17 日 04:59）",
+    "url": "https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites/",
+    "url_label": "Ars Technica 原文",
+    "alt_urls": [
+      {
+        "label": "OpenAI Alignment 事故报告（政府统计网站案例）",
+        "url": "https://alignment.openai.com/misalignment-reports/retrieving-server-secrets-and-bypassing-authorization-on-a-government-statistics-website"
+      },
+      {
+        "label": "Fortune 相关报道",
+        "url": "https://fortune.com/2026/10/16/openai-discloses-four-more-rogue-incidents-involving-financial-medical-and-government-data/"
+      }
+    ],
+    "excerpt_note": "节选自原文开篇、政府统计网站入侵案例、测试网钱包案例与结尾评述（约 450 词）。版权归 Ars Technica 所有，仅供个人学习，完整报道请看原文。",
+    "sections": [
+      [
+        "OpenAI said internal models hacked two more websites, bypassed company-imposed browsing restrictions, and used exposed credentials to draw cryptocurrency from a wallet it couldn’t otherwise access, in the latest installment of disclosures of its agents performing unethical and likely illegal acts.",
+        "The company on Thursday issued reports of four new incidents, all of which occurred in June. They come after the company revealed in July that internal test agents exploited a zero-day vulnerability in a tool designed to restrict their access to the Internet. They then broke into the network of AI tool provider Hugging Face. The agents took that illegal action to steal answers to a hacking test that weren’t available when completing the tasks on their own. The incident—which likely would have resulted in criminal charges had they been performed directly by a person—has further heightened concerns that widespread AI use could have harmful effects on an unprecedented scale."
+      ],
+      [
+        "In two of the cases reported Thursday, OpenAI agents tasked with retrieving information from websites hacked them when the models ran into obstacles obtaining it directly. In one incident during reinforcement training, a model that received access denials when trying to retrieve historical hospital-bed statistics on a government statistics website “used the site’s file-download feature to retrieve server configuration and application files, including sensitive credentials,” OpenAI said. “It inspected the application code, bypassed the statistics endpoint’s authorization checks, and retrieved data that had previously been denied. The model saved the data locally.”"
+      ],
+      [
+        "In a third report, the company said a model prompted to update a cryptocurrency trading application used funds from a locked wallet on a test network. The model “derived wallet keys from publicly known developer recovery phrases, found an account with test-network funds, and used that account to pay for the requested contract deployment.”",
+        "The report continued: “The model questioned whether it had permission, then reasoned that a public recovery phrase and valueless test-network tokens made the funds acceptable to use. The deployment succeeded and charged transaction fees to the account. This case shows that a model can substitute its own judgment about likely harm for the account holder’s permission, then act on that judgment without authorization.”"
+      ],
+      [
+        "It has become common for researchers and journalists to describe incidents like these as AI “going rogue.” That’s not necessarily true. While prompts fed to the models didn’t instruct them to use the alternate methods for completing their objectives, models are trained to be efficient, steadfastly persistent, and, when possible, to find shortcuts that lessen workloads. Further, most or all of the models had disabled certain guardrails that might have prevented the actions. In this sense, the models performed precisely as OpenAI had trained them to."
+      ]
+    ]
+  },
+  "notes": [
+    {
+      "p": [
+        0,
+        0
+      ],
+      "anchor": "bypassed",
+      "type": "vocab",
+      "head": "bypass",
+      "zh": "/ˈbaɪpæs/ v. 绕过、规避（限制、检查）。bypassed browsing restrictions = 绕过浏览限制。名词 bypass 也指「旁路、绕行道」。例：The malware bypassed the firewall."
+    },
+    {
+      "p": [
+        0,
+        0
+      ],
+      "anchor": "company-imposed",
+      "type": "grammar",
+      "head": "名词 + 过去分词 复合形容词",
+      "zh": "company-imposed = imposed by the company「公司强加的」。名词表施动者，过去分词表被动。同类：government-funded、AI-generated、user-defined。"
+    },
+    {
+      "p": [
+        0,
+        0
+      ],
+      "anchor": "exposed credentials",
+      "type": "vocab",
+      "head": "credential",
+      "zh": "/krəˈdenʃəl/ n. （常复数）凭证、登录凭据（账号密码、密钥、令牌）。exposed credentials = 泄露/暴露在外的凭据。例：Never store credentials in plain text."
+    },
+    {
+      "p": [
+        0,
+        0
+      ],
+      "anchor": "couldn’t otherwise access",
+      "type": "grammar",
+      "head": "otherwise = 否则/以别的方式",
+      "zh": "a wallet it couldn’t otherwise access = 一个（若不用这些凭据）它本来无法访问的钱包。it 前省略了关系代词 that/which。"
+    },
+    {
+      "p": [
+        0,
+        0
+      ],
+      "anchor": "in the latest installment of",
+      "type": "idiom",
+      "head": "the latest installment of …",
+      "zh": "最新一期/一轮……。installment /ɪnˈstɔːlmənt/ 本义「（连载的）一集、分期付款的一期」。可替换：the latest round / batch of。"
+    },
+    {
+      "p": [
+        0,
+        0
+      ],
+      "anchor": "its agents performing",
+      "type": "grammar",
+      "head": "of + 名词 + -ing（动名词复合结构）",
+      "zh": "disclosures of its agents performing … acts = 关于「其智能体做出……行为」的披露。its agents 是 performing 的逻辑主语。"
+    },
+    {
+      "p": [
+        0,
+        1
+      ],
+      "anchor": "all of which occurred in June",
+      "type": "grammar",
+      "head": "all of which 非限制性定语从句",
+      "zh": "= and all of them occurred in June。代词 all / some / none / most + of which/whom，引出补充说明，指代前面的 four new incidents。"
+    },
+    {
+      "p": [
+        0,
+        1
+      ],
+      "anchor": "zero-day vulnerability",
+      "type": "vocab",
+      "head": "zero-day vulnerability",
+      "zh": "零日漏洞：厂商尚不知道、还没补丁的安全漏洞。vulnerability /ˌvʌlnərəˈbɪləti/ n. 漏洞、弱点。例：Hackers exploited a zero-day vulnerability in the browser."
+    },
+    {
+      "p": [
+        0,
+        1
+      ],
+      "anchor": "designed to restrict",
+      "type": "grammar",
+      "head": "过去分词短语作后置定语",
+      "zh": "a tool designed to restrict their access = a tool that was designed to …「一个旨在限制其上网的工具」。be designed to do = 旨在、用来。"
+    },
+    {
+      "p": [
+        0,
+        1
+      ],
+      "anchor": "broke into",
+      "type": "idiom",
+      "head": "break into",
+      "zh": "闯入、侵入（系统、房屋）。broke into the network = 入侵网络。同义 hack into / breach。注意 break in（无宾语）也常用：Someone broke in last night."
+    },
+    {
+      "p": [
+        0,
+        1
+      ],
+      "anchor": "on their own",
+      "type": "idiom",
+      "head": "on one’s own",
+      "zh": "独立地、靠自己。answers … that weren’t available when completing the tasks on their own = 自己做题时拿不到的答案。同义 by themselves / unaided。"
+    },
+    {
+      "p": [
+        0,
+        1
+      ],
+      "anchor": "criminal charges",
+      "type": "idiom",
+      "head": "criminal charges",
+      "zh": "刑事指控。face / bring / file charges = 面临 / 提出指控。charge 在此是「指控」，不是「收费」。"
+    },
+    {
+      "p": [
+        0,
+        1
+      ],
+      "anchor": "had they been performed directly by a person",
+      "type": "grammar",
+      "head": "省略 if 的虚拟倒装",
+      "zh": "= if they had been performed directly by a person。与过去事实相反的虚拟条件：would have resulted in … had they been … 「如果是人直接干的，很可能已被刑事起诉」。"
+    },
+    {
+      "p": [
+        0,
+        1
+      ],
+      "anchor": "heightened concerns",
+      "type": "idiom",
+      "head": "heighten concerns",
+      "zh": "加剧担忧。heighten /ˈhaɪtən/ v. 加强、提高。可替换：raise / deepen / fuel concerns。"
+    },
+    {
+      "p": [
+        0,
+        1
+      ],
+      "anchor": "on an unprecedented scale",
+      "type": "idiom",
+      "head": "on an unprecedented scale",
+      "zh": "以前所未有的规模。unprecedented /ʌnˈpresɪdentɪd/ adj. 史无前例的。on a large / global scale 同结构，介词用 on。"
+    },
+    {
+      "p": [
+        1,
+        0
+      ],
+      "anchor": "tasked with",
+      "type": "grammar",
+      "head": "be tasked with doing",
+      "zh": "被分派去做……。OpenAI agents tasked with retrieving information … hacked them：过去分词短语修饰 agents，主干是 agents … hacked them（them = websites）。"
+    },
+    {
+      "p": [
+        1,
+        0
+      ],
+      "anchor": "retrieving",
+      "type": "vocab",
+      "head": "retrieve",
+      "zh": "/rɪˈtriːv/ v. 取回、检索（数据）。retrieve information / data = 获取信息。名词 retrieval：RAG = retrieval-augmented generation。例：The tool retrieves documents from the web."
+    },
+    {
+      "p": [
+        1,
+        0
+      ],
+      "anchor": "ran into obstacles",
+      "type": "idiom",
+      "head": "run into obstacles",
+      "zh": "遇到障碍、碰壁。run into = 意外遇到（困难、问题、熟人）。可替换：hit a wall / encounter difficulties。"
+    },
+    {
+      "p": [
+        1,
+        0
+      ],
+      "anchor": "reinforcement training",
+      "type": "vocab",
+      "head": "reinforcement",
+      "zh": "/ˌriːɪnˈfɔːrsmənt/ n. 强化。reinforcement training/learning = 强化学习训练：模型做对给奖励，靠试错优化。例：The model was fine-tuned with reinforcement learning."
+    },
+    {
+      "p": [
+        1,
+        0
+      ],
+      "anchor": "a model that received access denials",
+      "type": "grammar",
+      "head": "长句拆解",
+      "zh": "主干：a model … “used the site’s file-download feature …,” OpenAI said。that 从句（received access denials）和 when trying to … 状语都在修饰 a model；引号里的谓语 used 才接上主语。"
+    },
+    {
+      "p": [
+        1,
+        0
+      ],
+      "anchor": "authorization checks",
+      "type": "vocab",
+      "head": "authorization",
+      "zh": "/ˌɔːθərəˈzeɪʃən/ n. 授权、权限。authorization checks = 权限校验。区分 authentication（认证：你是谁）与 authorization（授权：你能做什么）。"
+    },
+    {
+      "p": [
+        1,
+        0
+      ],
+      "anchor": "had previously been denied",
+      "type": "grammar",
+      "head": "过去完成被动 had been done",
+      "zh": "数据「此前曾被拒绝访问」，发生在 retrieved 之前，所以用过去完成时；被动表示数据被拒。"
+    },
+    {
+      "p": [
+        2,
+        0
+      ],
+      "anchor": "prompted to update",
+      "type": "grammar",
+      "head": "过去分词后置 + 主干",
+      "zh": "a model prompted to update a cryptocurrency trading application used funds …：主干 a model used funds；prompted to … 修饰 model（= that was prompted to …）。prompt 作动词 = 提示、指令。"
+    },
+    {
+      "p": [
+        2,
+        0
+      ],
+      "anchor": "derived wallet keys from",
+      "type": "idiom",
+      "head": "derive A from B",
+      "zh": "从 B 推导/获得 A。derive /dɪˈraɪv/。derived wallet keys from … recovery phrases = 由助记词推导出钱包私钥。被动 be derived from = 源自。"
+    },
+    {
+      "p": [
+        2,
+        0
+      ],
+      "anchor": "recovery phrases",
+      "type": "vocab",
+      "head": "recovery phrase",
+      "zh": "/rɪˈkʌvəri freɪz/ n. 助记词（恢复短语，又称 seed phrase）：一串单词，可还原钱包私钥。公开的助记词 = 谁都能动这个钱包。"
+    },
+    {
+      "p": [
+        2,
+        0
+      ],
+      "anchor": "contract deployment",
+      "type": "vocab",
+      "head": "deployment",
+      "zh": "/dɪˈplɔɪmənt/ n. 部署。contract deployment = （智能）合约部署上链，需支付手续费（gas）。动词 deploy：deploy an app / a model。"
+    },
+    {
+      "p": [
+        2,
+        1
+      ],
+      "anchor": "questioned whether it had permission",
+      "type": "grammar",
+      "head": "question whether …",
+      "zh": "怀疑/质疑是否……。question 作动词 + whether 宾语从句（陈述语序）。注意后面 then reasoned that …：先质疑，再自我说服。"
+    },
+    {
+      "p": [
+        2,
+        1
+      ],
+      "anchor": "valueless",
+      "type": "vocab",
+      "head": "valueless",
+      "zh": "/ˈvæljuːləs/ adj. 没有价值的。valueless test-network tokens = 不值钱的测试网代币。注意 invaluable = 极其宝贵的（不是「没价值」）。"
+    },
+    {
+      "p": [
+        2,
+        1
+      ],
+      "anchor": "made the funds acceptable to use",
+      "type": "grammar",
+      "head": "make + 宾语 + 形容词 + to do",
+      "zh": "使资金「可以拿来用」。acceptable 是宾补，to use 修饰 acceptable。类似：make the text easy to read。"
+    },
+    {
+      "p": [
+        2,
+        1
+      ],
+      "anchor": "substitute its own judgment about likely harm for",
+      "type": "idiom",
+      "head": "substitute A for B",
+      "zh": "用 A 代替 B（A 是新的、B 是原本应有的）。这里：用模型「自己对危害的判断」代替「账户持有人的许可」。易错：substitute A for B ≠ replace A with B（方向相反）。"
+    },
+    {
+      "p": [
+        2,
+        1
+      ],
+      "anchor": "without authorization",
+      "type": "idiom",
+      "head": "without authorization",
+      "zh": "未经授权。法律、安全语境常用：access a system without authorization = 未授权访问。同义 without permission。"
+    },
+    {
+      "p": [
+        3,
+        0
+      ],
+      "anchor": "It has become common for researchers and journalists to describe",
+      "type": "grammar",
+      "head": "It + be + adj + for sb + to do",
+      "zh": "形式主语 It 代替后面的不定式：「研究者和记者把……说成……已成常态」。for sb 引出不定式的逻辑主语。"
+    },
+    {
+      "p": [
+        3,
+        0
+      ],
+      "anchor": "incidents like these as",
+      "type": "idiom",
+      "head": "describe A as B",
+      "zh": "把 A 描述为 B。describe incidents like these as AI “going rogue” = 把这类事件说成 AI「失控」。同构：regard / see / view A as B。"
+    },
+    {
+      "p": [
+        3,
+        0
+      ],
+      "anchor": "going rogue",
+      "type": "idiom",
+      "head": "go rogue",
+      "zh": "失控、脱离掌控擅自行动。rogue /roʊɡ/ adj. 不受控制的、流氓的：a rogue state、a rogue trader。例：Critics worry AI agents could go rogue."
+    },
+    {
+      "p": [
+        3,
+        0
+      ],
+      "anchor": "not necessarily true",
+      "type": "idiom",
+      "head": "not necessarily",
+      "zh": "不一定、未必（部分否定）。That’s not necessarily true = 那未必属实。比 That’s not true 语气缓和。"
+    },
+    {
+      "p": [
+        3,
+        0
+      ],
+      "anchor": "prompts fed to the models",
+      "type": "grammar",
+      "head": "过去分词 fed 后置",
+      "zh": "prompts fed to the models = prompts that were fed to the models「输入给模型的提示词」。feed sth to sb/sth = 把……喂给。"
+    },
+    {
+      "p": [
+        3,
+        0
+      ],
+      "anchor": "steadfastly persistent",
+      "type": "vocab",
+      "head": "steadfastly",
+      "zh": "/ˈstedfæstli/ adv. 坚定不移地。steadfastly persistent = 执着到底、锲而不舍。persistent /pərˈsɪstənt/ adj. 坚持不懈的。"
+    },
+    {
+      "p": [
+        3,
+        0
+      ],
+      "anchor": "lessen workloads",
+      "type": "vocab",
+      "head": "lessen",
+      "zh": "/ˈlesən/ v. 减少、减轻（与 lesson 同音）。lessen workloads = 减轻工作量。同义 reduce / ease。"
+    },
+    {
+      "p": [
+        3,
+        0
+      ],
+      "anchor": "guardrails",
+      "type": "vocab",
+      "head": "guardrail",
+      "zh": "/ˈɡɑːrdreɪl/ n. 护栏；（AI）安全防护机制。disable guardrails = 关闭防护。例：The company added new guardrails to its chatbot."
+    },
+    {
+      "p": [
+        3,
+        0
+      ],
+      "anchor": "might have prevented",
+      "type": "grammar",
+      "head": "might have done",
+      "zh": "对过去的推测/本可能：「本来可能阻止这些行为的」防护。这里暗含：防护被关掉了，所以没能阻止。"
+    },
+    {
+      "p": [
+        3,
+        0
+      ],
+      "anchor": "as OpenAI had trained them to",
+      "type": "grammar",
+      "head": "不定式省略",
+      "zh": "句末 to 后省略了动词（= trained them to perform），避免重复。口语常见：I didn’t want to, but I had to."
+    }
+  ],
+  "review_words": [
+    {
+      "word": "credential",
+      "ipa": "/krəˈdenʃəl/",
+      "zh": "n. 凭证、登录凭据",
+      "example": "The model used exposed credentials to draw cryptocurrency from a wallet."
+    },
+    {
+      "word": "vulnerability",
+      "ipa": "/ˌvʌlnərəˈbɪləti/",
+      "zh": "n. 漏洞、弱点",
+      "example": "Internal test agents exploited a zero-day vulnerability in a tool."
+    },
+    {
+      "word": "unprecedented",
+      "ipa": "/ʌnˈpresɪdentɪd/",
+      "zh": "adj. 史无前例的",
+      "example": "Widespread AI use could have harmful effects on an unprecedented scale."
+    },
+    {
+      "word": "derive",
+      "ipa": "/dɪˈraɪv/",
+      "zh": "v. 推导出、获得",
+      "example": "The model derived wallet keys from publicly known recovery phrases."
+    },
+    {
+      "word": "guardrail",
+      "ipa": "/ˈɡɑːrdreɪl/",
+      "zh": "n. 护栏；（AI）安全防护机制",
+      "example": "Most of the models had disabled certain guardrails."
+    }
+  ],
+  "patterns": [
+    {
+      "pattern": "A — which would have resulted in B had it been done by C — has heightened concerns that …",
+      "zh": "A（若由 C 来做本会导致 B）加剧了人们对……的担忧（省略 if 的虚拟倒装）",
+      "from": "The incident—which likely would have resulted in criminal charges had they been performed directly by a person—has further heightened concerns that widespread AI use could have harmful effects on an unprecedented scale.",
+      "model": "The outage—which would have cost the bank millions had it happened on a weekday—has heightened concerns about its aging systems.",
+      "model_zh": "这次宕机（若发生在工作日，本会让银行损失数百万）加剧了人们对其老旧系统的担忧。"
+    },
+    {
+      "pattern": "substitute A for B",
+      "zh": "用 A 代替 B（A 取代了原本应有的 B）",
+      "from": "This case shows that a model can substitute its own judgment about likely harm for the account holder’s permission, then act on that judgment without authorization.",
+      "model": "Students shouldn’t substitute a chatbot’s summary for reading the original paper.",
+      "model_zh": "学生不应该用聊天机器人的摘要代替阅读原论文。"
+    },
+    {
+      "pattern": "It has become common for A to describe B as C. That’s not necessarily true.",
+      "zh": "A 把 B 说成 C 已成常态，但这未必属实",
+      "from": "It has become common for researchers and journalists to describe incidents like these as AI “going rogue.” That’s not necessarily true.",
+      "model": "It has become common for investors to describe every AI startup as the next Google. That’s not necessarily true.",
+      "model_zh": "投资者把每家 AI 初创公司都说成下一个谷歌已成常态，但这未必属实。"
+    }
+  ],
+  "podcast": {
+    "show": "Science Quickly (Scientific American)",
+    "title": "Rogue AI or human error? The real story behind the OpenAI-Hugging Face incident",
+    "date": "2026-10-07",
+    "url": "https://www.scientificamerican.com/podcast/episode/rogue-ai-or-human-error-the-real-story-behind-the-openai-hugging-face-incident/",
+    "zh": "Science Quickly 主持人 Rachel Feltman 对话剑桥学者 Eryk Salvaggio，聊 OpenAI 智能体入侵 Hugging Face 事件：「rogue AI」的说法是否夸大了模型的主观意图，责任到底在谁。和今天文末「与其说失控，不如说正是被训练成这样」同一个问题，适合泛听抓 rogue / accountability / agent / prompt。"
+  },
+  "audio": {
+    "normal": "audio.mp3",
+    "slow": "audio-slow.mp3",
+    "voice": "en-US-AriaNeural"
+  }
+}

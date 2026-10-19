@@ -1,0 +1,492 @@
+{
+  "date": "2026-10-19",
+  "topic": "stocks",
+  "topic_label": "美股",
+  "issue_title_zh": "财报周前瞻：通胀压力下，奈飞、特斯拉、Meta 等将交出怎样的成绩单",
+  "lead_zh": "今天读美联社（AP）周六发布的「下周看点」前瞻。本周通用汽车、奈飞、联合航空、特斯拉、Meta、IBM 等公布财报，分析师预计标普 500 整体利润增长近 30%，能源领涨、科技其次；投资者想知道 AI 巨额投入能否转化为增长。消费者一边抱怨物价一边继续花钱：9 月零售增 0.8%，剔除加油站仅 0.2%。重点看：dominate the calendar / weigh on / through the lens of / keep pace with / run-up / seep into 这类财经表达。",
+  "article": {
+    "title": "Big earnings reports, homebuilding and the mood of consumers up front next week",
+    "author": "Damian J. Troise",
+    "source": "The Associated Press",
+    "published": "2026-10-17 11:32 EDT（北京时间 10 月 17 日 23:32；WTOP 转载页时间）",
+    "url": "https://wtop.com/national/2026/10/big-earnings-reports-homebuilding-and-the-mood-of-consumers-up-front-next-week/",
+    "url_label": "AP 原文（WTOP 转载）",
+    "alt_urls": [
+      {
+        "label": "AP News 原文（标题：US earnings and economic reports this week to spotlight inflation’s toll）",
+        "url": "https://apnews.com/article/earnings-inflation-technology-housing-employment-3982e18ed2061f793aa921b6addade05"
+      },
+      {
+        "label": "WRAL 转载",
+        "url": "https://www.wral.com/news/ap/3982e-big-earnings-reports-homebuilding-and-the-mood-of-consumers-up-front-next-week/"
+      }
+    ],
+    "excerpt_note": "节选自原文开篇、「企业财报」一节与「消费者情绪」一节（约 410 词，略去过渡句与住房开工一节）。版权归 The Associated Press 所有，仅供个人学习，完整报道请看原文。",
+    "sections": [
+      [
+        "NEW YORK (AP) — Quarterly financial updates from a wide range of major U.S. corporations, including technology companies and airlines, will dominate the calendar this week. But there will also be new data on jobs and the mood of American consumers who feel overburdened by rising prices on everything from beef to a gallon of gas.",
+        "Inflation has also weighed on U.S. corporations, as shown in data last week on producer prices and import prices, both of which measure rising costs before they hit the consumer."
+      ],
+      [
+        "Investors will get a broad view of how companies are handling the persistent pressure of inflation through the lens of toy sales, streaming entertainment viewership, computer chips and airline bookings.",
+        "Wall Street expects another big surge in profits from companies in the S&P 500 index. Overall, analysts polled by FactSet expect profit growth of just under 30%, with the energy industry leading the way, followed by the tech sector.",
+        "On Tuesday, General Motors reports quarterly results. Industry analysts believe profits surged. Toymaker Hasbro and streaming entertainment giant Netflix also report Tuesday. Wall Street expects a slimmer profit from United Airlines Holdings on Wednesday. Airlines have raised fares, but it’s difficult to keep pace with rising fuel costs, as well as labor costs and other inflationary pressures.",
+        "Companies with ties to artificial intelligence also report quarterly earnings. Wall Street expects slimmer profits for Tesla, while Facebook owner Meta and IBM are expected to report profit growth. Investors want to know whether all the big AI investments are translating into future growth and whether a major run-up in stock values is justified."
+      ],
+      [
+        "The University of Michigan releases one final update for its October sentiment survey, which has been worsening. That tracks with other consumer confidence surveys showing that households are increasingly worried about inflation’s impact on their budgets and ability to plan for the future.",
+        "While American consumers are clearly feeling glum, they continue to spend. Part of the reason is simply that prices are higher. For example, according to data released last week, retail sales increased 0.8% in September, but if sales at gas stations are removed, they rose only 0.2%.",
+        "What is adding to consumer frustration is that those higher gas prices appear to be seeping into other parts of the economy. Wholesale food prices jumped 1.2% from August to September. The data indicated that rising fuel prices, particularly for diesel used by long-haul trucks and freight trains, are pushing up the cost of shipping and warehousing goods."
+      ]
+    ]
+  },
+  "notes": [
+    {
+      "p": [
+        0,
+        0
+      ],
+      "anchor": "Quarterly financial updates",
+      "type": "vocab",
+      "head": "quarterly",
+      "zh": "/ˈkwɔːrtərli/ adj. 季度的。quarterly financial updates = 季度财务更新，即季报。quarterly results / earnings 同义。例：The company reports quarterly results next Tuesday."
+    },
+    {
+      "p": [
+        0,
+        0
+      ],
+      "anchor": "dominate the calendar",
+      "type": "idiom",
+      "head": "dominate the calendar",
+      "zh": "占据日程表的主角、成为本周最主要的事件。财经前瞻常用：Earnings will dominate the calendar this week. 也可说 take center stage / be front and center。"
+    },
+    {
+      "p": [
+        0,
+        0
+      ],
+      "anchor": "overburdened by rising prices",
+      "type": "vocab",
+      "head": "overburdened",
+      "zh": "/ˌoʊvərˈbɜːrdnd/ adj. 负担过重的、不堪重负的。over- 过度 + burden 负担。be overburdened by/with … = 被……压得喘不过气。例：Many families feel overburdened by rent and childcare costs."
+    },
+    {
+      "p": [
+        0,
+        0
+      ],
+      "anchor": "from beef to a gallon of gas",
+      "type": "idiom",
+      "head": "from A to B（列举范围）",
+      "zh": "从……到……，用两个具体的例子概括「什么都在涨」。gallon /ˈɡælən/ 加仑（约 3.785 升），美国油价按加仑计；gas 在美式英语里指汽油（gasoline）。"
+    },
+    {
+      "p": [
+        0,
+        1
+      ],
+      "anchor": "weighed on",
+      "type": "idiom",
+      "head": "weigh on",
+      "zh": "压在……上；拖累、给……造成压力。Inflation has also weighed on U.S. corporations = 通胀也拖累了美国企业。股市常说 weigh on stocks（拖累股价）。同义 drag on / hurt。"
+    },
+    {
+      "p": [
+        0,
+        1
+      ],
+      "anchor": "as shown in data last week on",
+      "type": "grammar",
+      "head": "as shown in …（省略结构）",
+      "zh": "= as is shown in …，as 引导方式状语从句并省略了主语和 be：「正如上周……数据所显示的」。类似 as mentioned above / as expected / as noted earlier。on 引出数据的主题：data on producer prices = 关于生产者价格的数据。"
+    },
+    {
+      "p": [
+        0,
+        1
+      ],
+      "anchor": "both of which measure rising costs",
+      "type": "grammar",
+      "head": "both of which 非限制性定语从句",
+      "zh": "代词 + of + which，指代前面的 producer prices and import prices 两项数据：「这两项都衡量……」。类似 some of which / all of whom。before they hit the consumer 的 hit = 到达、落到……身上。"
+    },
+    {
+      "p": [
+        1,
+        0
+      ],
+      "anchor": "a broad view of",
+      "type": "idiom",
+      "head": "get a broad view of",
+      "zh": "获得对……的全面了解、大致全貌。broad = 宽泛的、全面的。反义 a narrow view。例：The survey gives a broad view of how households are coping."
+    },
+    {
+      "p": [
+        1,
+        0
+      ],
+      "anchor": "persistent pressure",
+      "type": "vocab",
+      "head": "persistent",
+      "zh": "/pərˈsɪstənt/ adj. 持续的、顽固不退的。persistent inflation = 顽固通胀。例：Persistent inflation could force the Fed to keep rates high."
+    },
+    {
+      "p": [
+        1,
+        0
+      ],
+      "anchor": "through the lens of",
+      "type": "idiom",
+      "head": "through the lens of …",
+      "zh": "通过……的视角/角度来观察。lens /lenz/ 镜头。后面列举四个「镜头」：玩具销量、流媒体收视、芯片、机票预订——即通过不同行业财报看通胀影响。同义 from the perspective of。"
+    },
+    {
+      "p": [
+        1,
+        0
+      ],
+      "anchor": "viewership",
+      "type": "vocab",
+      "head": "viewership",
+      "zh": "/ˈvjuːərʃɪp/ n. 收视人数、观看量。-ship 表集体。streaming entertainment viewership = 流媒体收视情况。类似 readership（读者群）、ridership（乘客量）。"
+    },
+    {
+      "p": [
+        1,
+        1
+      ],
+      "anchor": "surge in profits",
+      "type": "vocab",
+      "head": "surge",
+      "zh": "/sɜːrdʒ/ n./v. 激增、猛涨。a surge in profits = 利润大增；profits surged（下一段用作动词）。例：Shares surged 10% after the earnings beat."
+    },
+    {
+      "p": [
+        1,
+        1
+      ],
+      "anchor": "analysts polled by FactSet",
+      "type": "grammar",
+      "head": "过去分词短语后置作定语",
+      "zh": "polled by FactSet 修饰 analysts = analysts who were polled by FactSet：「接受 FactSet 调查的分析师」。poll /poʊl/ v. 对……做调查。FactSet 是金融数据公司，常统计分析师一致预期。"
+    },
+    {
+      "p": [
+        1,
+        1
+      ],
+      "anchor": "just under 30%",
+      "type": "idiom",
+      "head": "just under / just over",
+      "zh": "略低于 / 略高于。just under 30% = 将近 30%（不到 30%）。同义 slightly below / nearly。反义 just over 30%。"
+    },
+    {
+      "p": [
+        1,
+        1
+      ],
+      "anchor": "with the energy industry leading the way, followed by the tech sector",
+      "type": "grammar",
+      "head": "with 复合结构 + followed by",
+      "zh": "with + 名词 + 现在分词（leading the way 主动：能源行业领跑），再接过去分词 followed by …（其后是科技板块）。lead the way = 领先、带头。排名句型：A leading the way, followed by B = A 第一，B 第二。"
+    },
+    {
+      "p": [
+        1,
+        2
+      ],
+      "anchor": "reports quarterly results",
+      "type": "vocab",
+      "head": "report（动词）",
+      "zh": "/rɪˈpɔːrt/ v. 公布（业绩）。General Motors reports quarterly results = 通用汽车发布季度财报。前瞻文章用一般现在时表示已排定的未来事件（日程表现在时），如 Hasbro and … Netflix also report Tuesday。"
+    },
+    {
+      "p": [
+        1,
+        2
+      ],
+      "anchor": "a slimmer profit",
+      "type": "vocab",
+      "head": "slim",
+      "zh": "/slɪm/ adj. 微薄的、减少的。a slimmer profit = 更薄的利润（利润下降）。slim margins = 微薄的利润率；slim chance = 渺茫的机会。"
+    },
+    {
+      "p": [
+        1,
+        2
+      ],
+      "anchor": "raised fares",
+      "type": "vocab",
+      "head": "fare",
+      "zh": "/fer/ n. （交通工具的）票价。raise fares = 提高票价；airfare = 机票价格。注意区分 fee（服务费）、fare（车/机票钱）。"
+    },
+    {
+      "p": [
+        1,
+        2
+      ],
+      "anchor": "it’s difficult to",
+      "type": "grammar",
+      "head": "it 作形式主语",
+      "zh": "it 是形式主语，真正主语是后面的不定式 to keep pace with …：「要跟上……的上涨很难」。英语喜欢把长主语后置，避免头重脚轻。"
+    },
+    {
+      "p": [
+        1,
+        2
+      ],
+      "anchor": "keep pace with",
+      "type": "idiom",
+      "head": "keep pace with",
+      "zh": "跟上……的步伐、与……同步。票价涨幅跟不上燃油成本涨幅。例：Wages haven’t kept pace with inflation. 同义 keep up with。"
+    },
+    {
+      "p": [
+        1,
+        2
+      ],
+      "anchor": "inflationary pressures",
+      "type": "vocab",
+      "head": "inflationary",
+      "zh": "/ɪnˈfleɪʃəneri/ adj. 通货膨胀的、引起通胀的。inflationary pressures = 通胀压力（常用复数）。名词 inflation，反义 deflationary。"
+    },
+    {
+      "p": [
+        1,
+        3
+      ],
+      "anchor": "Companies with ties to",
+      "type": "idiom",
+      "head": "ties to",
+      "zh": "与……有关联。ties 作「联系、关系」时用复数。companies with ties to artificial intelligence = 与 AI 有关的公司（AI 概念股）。同义 links to / exposure to。"
+    },
+    {
+      "p": [
+        1,
+        3
+      ],
+      "anchor": "while Facebook owner Meta and IBM",
+      "type": "grammar",
+      "head": "while 表对比",
+      "zh": "while 在这里不是「当……时」，而是「而、然而」，对比两边：特斯拉利润预计下滑，而 Meta 和 IBM 预计增长。Facebook owner Meta 是同位语前置的新闻写法（= Meta, the owner of Facebook）。"
+    },
+    {
+      "p": [
+        1,
+        3
+      ],
+      "anchor": "Investors want to know whether",
+      "type": "grammar",
+      "head": "know whether … and whether …",
+      "zh": "know 后接两个并列的 whether 宾语从句：①AI 大投入是否正转化为未来增长；②股价大涨是否合理。宾语从句用陈述语序；whether 比 if 更正式，并列时常重复 whether。"
+    },
+    {
+      "p": [
+        1,
+        3
+      ],
+      "anchor": "translating into",
+      "type": "idiom",
+      "head": "translate into",
+      "zh": "转化为、带来（某种结果）。investments are translating into future growth = 投资正在转化为增长。例：Higher sales didn’t translate into bigger profits."
+    },
+    {
+      "p": [
+        1,
+        3
+      ],
+      "anchor": "a major run-up in stock values",
+      "type": "vocab",
+      "head": "run-up",
+      "zh": "/ˈrʌnʌp/ n. （价格的）大幅上涨、一路上涨。a run-up in stock values = 股价大涨。注意 the run-up to … 也可表示「……的前期/准备阶段」，如 the run-up to the election。"
+    },
+    {
+      "p": [
+        2,
+        0
+      ],
+      "anchor": "sentiment survey",
+      "type": "vocab",
+      "head": "sentiment",
+      "zh": "/ˈsentɪmənt/ n. 情绪、看法。consumer sentiment = 消费者信心（密歇根大学消费者信心指数就叫 sentiment index）。market sentiment = 市场情绪。"
+    },
+    {
+      "p": [
+        2,
+        0
+      ],
+      "anchor": "which has been worsening",
+      "type": "grammar",
+      "head": "现在完成进行时",
+      "zh": "has been worsening = 一直在恶化（从过去持续到现在、还可能继续）。worsen /ˈwɜːrsn/ v. 变坏。非限制性 which 从句补充说明 the survey 的走势。"
+    },
+    {
+      "p": [
+        2,
+        0
+      ],
+      "anchor": "That tracks with",
+      "type": "idiom",
+      "head": "track with",
+      "zh": "与……一致、吻合。That tracks with other surveys = 这与其他调查结果一致。口语也说 That tracks.（说得通）。同义 be in line with / be consistent with。"
+    },
+    {
+      "p": [
+        2,
+        0
+      ],
+      "anchor": "showing that households are increasingly worried about",
+      "type": "grammar",
+      "head": "现在分词作后置定语",
+      "zh": "showing that … 修饰 surveys = surveys which show that …：「显示家庭越来越担心……的调查」。increasingly + 形容词 = 越来越……。"
+    },
+    {
+      "p": [
+        2,
+        1
+      ],
+      "anchor": "feeling glum",
+      "type": "vocab",
+      "head": "glum",
+      "zh": "/ɡlʌm/ adj. 闷闷不乐的、沮丧的。consumers are feeling glum = 消费者情绪低落。同义 gloomy / downbeat。例：Investors were glum after the weak jobs report."
+    },
+    {
+      "p": [
+        2,
+        1
+      ],
+      "anchor": "Part of the reason is simply that",
+      "type": "grammar",
+      "head": "表语从句 the reason is that …",
+      "zh": "that 引导表语从句说明原因：「部分原因只是物价更高了」。注意固定用 the reason is that，不说 the reason is because（被视为冗余）。"
+    },
+    {
+      "p": [
+        2,
+        1
+      ],
+      "anchor": "if sales at gas stations are removed",
+      "type": "grammar",
+      "head": "if 条件句：剔除……后",
+      "zh": "「如果把加油站的销售额剔除」，即「剔除汽油后」零售只增 0.2%。财经常说 excluding gas / ex-gas / stripping out gas。说明消费额上涨主要是因为油价贵，而不是买得更多。"
+    },
+    {
+      "p": [
+        2,
+        2
+      ],
+      "anchor": "What is adding to consumer frustration is that",
+      "type": "grammar",
+      "head": "主语从句 What … is that …",
+      "zh": "What is adding to consumer frustration 是主语从句（让消费者更沮丧的事情），is 是系动词，that 引导表语从句。用来强调：「让消费者更窝火的是……」。add to = 加剧、增添。"
+    },
+    {
+      "p": [
+        2,
+        2
+      ],
+      "anchor": "seeping into",
+      "type": "vocab",
+      "head": "seep",
+      "zh": "/siːp/ v. 渗透、渗入。higher gas prices appear to be seeping into other parts of the economy = 油价上涨似乎正渗入经济的其他领域。比喻成本像液体一样慢慢扩散。同义 spill over into。"
+    },
+    {
+      "p": [
+        2,
+        2
+      ],
+      "anchor": "particularly for diesel used by",
+      "type": "grammar",
+      "head": "插入语 + 过去分词后置",
+      "zh": "particularly for diesel … 是插入的补充说明（尤其是柴油），used by long-haul trucks and freight trains 修饰 diesel = diesel that is used by …。主干：rising fuel prices … are pushing up the cost of …。"
+    },
+    {
+      "p": [
+        2,
+        2
+      ],
+      "anchor": "long-haul trucks",
+      "type": "vocab",
+      "head": "long-haul",
+      "zh": "/ˌlɔːŋ ˈhɔːl/ adj. 长途（运输）的。long-haul trucks = 长途货运卡车；long-haul flights = 长途航班。反义 short-haul。haul /hɔːl/ = 拖运。"
+    },
+    {
+      "p": [
+        2,
+        2
+      ],
+      "anchor": "warehousing",
+      "type": "vocab",
+      "head": "warehousing",
+      "zh": "/ˈwerhaʊzɪŋ/ n. 仓储。warehouse 仓库，作动词 = 存入仓库。shipping and warehousing = 运输与仓储（物流成本）。"
+    }
+  ],
+  "review_words": [
+    {
+      "word": "overburdened",
+      "ipa": "/ˌoʊvərˈbɜːrdnd/",
+      "zh": "adj. 负担过重的，不堪重负的",
+      "example": "American consumers feel overburdened by rising prices on everything from beef to a gallon of gas."
+    },
+    {
+      "word": "surge",
+      "ipa": "/sɜːrdʒ/",
+      "zh": "n./v. 激增，猛涨",
+      "example": "Wall Street expects another big surge in profits from companies in the S&P 500 index."
+    },
+    {
+      "word": "run-up",
+      "ipa": "/ˈrʌnʌp/",
+      "zh": "n. （价格）大幅上涨",
+      "example": "Investors want to know whether a major run-up in stock values is justified."
+    },
+    {
+      "word": "glum",
+      "ipa": "/ɡlʌm/",
+      "zh": "adj. 闷闷不乐的，沮丧的",
+      "example": "While American consumers are clearly feeling glum, they continue to spend."
+    },
+    {
+      "word": "seep",
+      "ipa": "/siːp/",
+      "zh": "v. 渗入，渗透",
+      "example": "Higher gas prices appear to be seeping into other parts of the economy."
+    }
+  ],
+  "patterns": [
+    {
+      "pattern": "Investors want to know whether A and whether B",
+      "zh": "投资者想知道 A 是否……，以及 B 是否……",
+      "from": "Investors want to know whether all the big AI investments are translating into future growth and whether a major run-up in stock values is justified.",
+      "model": "Shareholders want to know whether the new factory will pay off and whether the company can still afford its dividend.",
+      "model_zh": "股东们想知道新工厂能否带来回报，以及公司是否还付得起股息。"
+    },
+    {
+      "pattern": "X increased A%, but if Y is removed, it rose only B%",
+      "zh": "X 增长了 A%，但如果剔除 Y，只增长了 B%",
+      "from": "For example, according to data released last week, retail sales increased 0.8% in September, but if sales at gas stations are removed, they rose only 0.2%.",
+      "model": "Revenue increased 12% last quarter, but if the acquisition is removed, it rose only 3%.",
+      "model_zh": "上季度营收增长 12%，但如果剔除那笔收购，只增长了 3%。"
+    },
+    {
+      "pattern": "What is adding to A is that B",
+      "zh": "让 A 雪上加霜的是 B（主语从句强调）",
+      "from": "What is adding to consumer frustration is that those higher gas prices appear to be seeping into other parts of the economy.",
+      "model": "What is adding to investors’ worries is that bond yields keep climbing even as growth slows.",
+      "model_zh": "让投资者更加担忧的是，即使经济增长放缓，债券收益率仍在不断攀升。"
+    }
+  ],
+  "podcast": {
+    "show": "The Journal. (WSJ & Spotify Studios)",
+    "title": "Americans Are Grumpy About Prices. Why Are They Still Spending?",
+    "date": "2026-10-15",
+    "url": "https://www.wsj.com/podcasts/the-journal/americans-are-grumpy-about-prices-why-are-they-still-spending/6b33d323-6272-4748-845a-971c8c19fb2f",
+    "zh": "《华尔街日报》每日播客 The Journal：主持人 Ryan Knutson 对话 WSJ 记者 Jeanne Whalen，聊美国人为何对物价和经济前所未有地不满、却仍在不停消费（约 16 分钟）。正好对应今天文末「消费者情绪低落却继续花钱」那一段，适合泛听抓 consumer sentiment / spending / inflation / grumpy 这类词。"
+  },
+  "audio": {
+    "normal": "audio.mp3",
+    "slow": "audio-slow.mp3",
+    "voice": "en-US-AriaNeural"
+  }
+}

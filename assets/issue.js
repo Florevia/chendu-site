@@ -67,13 +67,21 @@
     if(k) setActive(k, true);
   });
 
+  function selNode(n){ return n && (n.nodeType === 1 ? n : n.parentNode); }
+  function inParaTr(n){
+    var e = selNode(n);
+    return !!(e && e.closest && e.closest('.para-tr'));
+  }
   function selectingText(){
     var s = window.getSelection();
-    return s && !s.isCollapsed && article && s.rangeCount && s.getRangeAt(0).intersectsNode(article);
+    if(!s || s.isCollapsed || !article || !s.rangeCount) return false;
+    var r = s.getRangeAt(0);
+    if(inParaTr(r.startContainer) || inParaTr(r.endContainer)) return false;
+    return r.intersectsNode(article);
   }
   document.addEventListener('click', function(e){
     var t = e.target;
-    if(!t.closest || t.closest('.un-fab,.un-editor,.un-toast,#toggle-all,.mynotes')) return;
+    if(!t.closest || t.closest('.un-fab,.un-editor,.un-toast,#toggle-all,.mynotes,.para-tr')) return;
     var act = t.closest('.un-act');
     if(act){ noteAction(act.dataset.act, act.closest('[data-un]').dataset.un); return; }
     if(selectingText()) return;
@@ -253,7 +261,7 @@
         sup.setAttribute('role', 'button'); sup.setAttribute('aria-label', '我的笔记');
         last.parentNode.insertBefore(sup, last.nextSibling);
       }
-      var row = paras[paraIndexAt(m, n.start)].parentNode;
+      var row = paras[paraIndexAt(m, n.start)].closest('.row');
       var L = row.querySelector('.side.left'), R = row.querySelector('.side.right');
       var side = L.children.length < R.children.length ? L : R;
       side.appendChild(buildNote(n, i));
@@ -283,7 +291,7 @@
     var s = window.getSelection();
     if(!s || !s.rangeCount || s.isCollapsed){ hideFab(); return; }
     var r = s.getRangeAt(0);
-    if(!r.intersectsNode(article)){ hideFab(); return; }
+    if(inParaTr(r.startContainer) || inParaTr(r.endContainer) || !r.intersectsNode(article)){ hideFab(); return; }
     var a = rangeToAnchor(r);
     if(!a){ hideFab(); return; }
     pendingSel = a;
@@ -518,5 +526,137 @@
     setTimeout(function(){ URL.revokeObjectURL(a.href); }, 1000);
   }
 
+  /* ================================================ per-paragraph translations
+     Stored apart from reader notes. Each item is tied to a paragraph by a short
+     quote of its text, with the index as a tie-break, so a later rebuild does
+     not paste a translation under the wrong paragraph. */
+  var TRKEY = 'chendu:tr:' + issueId;
+  var TRQ = 64;
+  var trText = paras.map(function(){ return ''; });
+
+  function paraPlain(p){
+    var w = document.createTreeWalker(p, NodeFilter.SHOW_TEXT, {acceptNode: function(n){
+      return n.parentNode.closest('sup') ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT; }});
+    var t = '', n;
+    while((n = w.nextNode())) t += n.data;
+    return t.replace(/\s+/g, ' ').trim();
+  }
+  function paraKey(p){ return paraPlain(p).slice(0, TRQ); }
+  function trLoad(){
+    try{
+      var v = JSON.parse(localStorage.getItem(TRKEY) || 'null');
+      return v && Array.isArray(v.items) ? v.items : [];
+    }catch(e){ return []; }
+  }
+  function trSave(){
+    var items = [];
+    paras.forEach(function(p, i){
+      var text = trText[i].trim();
+      if(text) items.push({i:i, key:paraKey(p), text:text, updated:Date.now()});
+    });
+    try{ localStorage.setItem(TRKEY, JSON.stringify({v:1, items:items})); return true; }
+    catch(e){ toast('浏览器禁止了本地存储，翻译无法保存'); return false; }
+  }
+  function trAssign(items){
+    var used = {};
+    return paras.map(function(p, i){
+      var key = paraKey(p), hit = null;
+      items.forEach(function(it, k){
+        if(used[k] || it.key !== key) return;
+        if(hit == null || it.i === i) hit = k;
+      });
+      if(hit == null) return '';
+      used[hit] = true;
+      return items[hit].text || '';
+    });
+  }
+
+  function mountTranslations(){
+    trText = trAssign(trLoad());
+    paras.forEach(function(p, i){
+      var col = el('div', 'para-col');
+      p.parentNode.insertBefore(col, p);
+      col.appendChild(p);
+      col.appendChild(buildTrans(i));
+    });
+  }
+  function buildTrans(i){
+    var box = el('div', 'para-tr');
+    var add = el('button', 'tr-add tr-ui', '写翻译'); add.type = 'button';
+    var view = el('div', 'tr-view'); view.hidden = true;
+    var edit = el('button', 'tr-edit tr-ui', '编辑'); edit.type = 'button'; edit.hidden = true;
+    var editor = el('div', 'tr-box tr-ui'); editor.hidden = true;
+    var ta = el('textarea'); ta.rows = 3; ta.maxLength = 4000; ta.placeholder = '写下这一段的中文翻译…';
+    ta.setAttribute('aria-label', '这一段的翻译');
+    var bar = el('div', 'tr-bar');
+    var clear = el('button', 'tr-clear', '清空'); clear.type = 'button';
+    var status = el('span', 'tr-status', '');
+    bar.appendChild(clear); bar.appendChild(status);
+    editor.appendChild(ta); editor.appendChild(bar);
+    box.appendChild(add); box.appendChild(view); box.appendChild(edit); box.appendChild(editor);
+
+    var timer = null;
+    function paint(editing){
+      var v = trText[i], has = !!v.trim();
+      ta.value = v;
+      view.textContent = v.trim();
+      box.classList.toggle('has-text', has);
+      add.hidden = editing || has;
+      editor.hidden = !editing;
+      view.hidden = editing || !has;
+      edit.hidden = editing || !has;
+    }
+    function open(){
+      paint(true);
+      ta.focus();
+      var len = ta.value.length;
+      ta.setSelectionRange(len, len);
+    }
+    function saved(){ status.textContent = '已保存'; }
+    add.addEventListener('click', open);
+    edit.addEventListener('click', open);
+    ta.addEventListener('input', function(){
+      trText[i] = ta.value;
+      view.textContent = ta.value.trim();
+      box.classList.toggle('has-text', !!ta.value.trim());
+      status.textContent = '保存中…';
+      clearTimeout(timer);
+      timer = setTimeout(function(){ if(trSave()) saved(); }, 400);
+    });
+    ta.addEventListener('blur', function(){
+      clearTimeout(timer);
+      trText[i] = ta.value;
+      if(trSave() && ta.value.trim()) saved();
+      setTimeout(function(){ if(!editor.contains(document.activeElement)) paint(false); }, 150);
+    });
+    clear.addEventListener('mousedown', function(e){ e.preventDefault(); });
+    clear.addEventListener('click', function(){
+      trText[i] = '';
+      status.textContent = '';
+      trSave();
+      paint(false);
+    });
+    paint(false);
+    return box;
+  }
+  window.addEventListener('storage', function(e){
+    if(e.key !== TRKEY) return;
+    trText = trAssign(trLoad());
+    paras.forEach(function(p, i){
+      var box = p.parentNode.querySelector('.para-tr');
+      if(!box || box.querySelector('textarea') === document.activeElement) return;
+      var view = box.querySelector('.tr-view'), add = box.querySelector('.tr-add'), edit = box.querySelector('.tr-edit'), editor = box.querySelector('.tr-box');
+      var has = !!trText[i].trim();
+      if(view) view.textContent = trText[i].trim();
+      box.classList.toggle('has-text', has);
+      if(add) add.hidden = has;
+      if(editor) editor.hidden = true;
+      if(view) view.hidden = !has;
+      if(edit) edit.hidden = !has;
+    });
+  });
+  window.addEventListener('pagehide', trSave);
+
+  mountTranslations();
   render();
 })();
